@@ -410,6 +410,11 @@ li.active {
    margin: 60px 0 0px 0;
 }
 
+.check{
+font-size: 16px;
+  font-family: 'Carrois Gothic', sans-serif;
+  padding:12px 0 0 0;
+}
 
 /* чек */
 .check2{

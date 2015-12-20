@@ -50,7 +50,7 @@
      <!-- стулья -->
     <div class="check2">
       <label class="label"> Количество стульев </label>
-      <input type="number" class="check2_num"  id="check2_" value="chairs_number" />
+      <input type="number" class="check2_num"  id="check2_1" value="chairs_number" />
     </div>
 
 
@@ -71,7 +71,7 @@
       </div>   <!-- компютеры -->
       <div class="check2_1" id="div_coputer" style="display : none">
         <label class="label_"> Количество компьютеров </label>
-        <input type="number" class="check2_num_" id="check2_" value="computer" />
+        <input type="number" class="check2_num_" id="check2_2" value="computer" />
       </div>
       <div class="check">
         <label><input type="checkbox" value="Projector" />Проектор</label>
@@ -85,7 +85,7 @@
 
     <div class="check2">
       <label class="label"> Количество розеток </label>
-      <input type="number" class="check2_num" id="check2_" value="outlets_number" />
+      <input type="number" class="check2_num" id="check2_3" value="outlets_number" />
     </div>
     <div class="check2">
     <label class="label"> Наличие кондиционера </label>
@@ -98,7 +98,7 @@
 
     <div class="check2">
       <label class="label"> Площадь аудитории </label>
-      <input type="number" class="check2_num" id="check2_" value="Area" />
+      <input type="number" class="check2_num" id="check2_4" value="Area" />
     </div>
 
 
@@ -128,6 +128,29 @@
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
+  <script>
+    document.getElementById('check2_1').onkeypress = function (e) {
+    return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
+    }
+  </script>
+  <script>
+    document.getElementById('check2_2').onkeypress = function (e) {
+    return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
+    }
+  </script>
+  <script>
+    document.getElementById('check2_3').onkeypress = function (e) {
+    return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
+    }
+  </script>
+  <script>
+    document.getElementById('check2_4').onkeypress = function (e) {
+    return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
+    }
+  </script>
+  
+  
+  
 
   <script>
     (function() {

@@ -197,7 +197,7 @@ button {
   display: block;
 
 }
-/* чек*/
+
 #but_save{
   width: 140px;
   padding: 9px 13px;
@@ -215,6 +215,7 @@ button {
   display: block;
   margin: 20px 0 0px 55px;
 }/* чек*/
+<<<<<<< HEAD
 #but_save{
   width: 140px;
   padding: 9px 13px;
@@ -334,6 +335,10 @@ button {
   display: block;
   margin: 20px 0 0px 55px;
 }
+=======
+
+
+>>>>>>> 3dd42fe920917140ff3c9f3640e9254bbdabfd1c
 
 
 #menu {
@@ -558,3 +563,26 @@ div.back {
   top: 19px;
   left: 25px;
 }
+
+
+#error_box{
+	display: none;
+	text-align: center;
+	background: linear-gradient(#F3F8F3,#E0EEE0);
+	position: absolute;
+	overflow:visible;
+	width: 340px;
+	height: 70px;
+	-webkit-box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.3);
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+}
+#error_message {
+	color: #004E63;
+	margin-top: 18px;
+	font-size: 21px;
+	font-family: 'Carrois Gothic', sans-serif;;
+}
+

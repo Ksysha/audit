@@ -21,7 +21,7 @@
 
   <hr>
   <div class = "exit back">
-    <a href="javascript:history.back()">Назад</a>
+    <a href="index.html">Назад</a>
   </div>
   <div id="title">
     <span id="building"></span>
@@ -34,7 +34,7 @@
       <button id="button" onclick="setRoom()">Создать</button>
     </form>
 
-    <form action="check.html" id="room-list">
+    <form action="check.html" id="room-list" style="display: none;">
       <ul>
         <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">105</li></a>
         <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">142</li></a>
@@ -67,7 +67,7 @@
   </div>
 
   <button class="digramm" id="dtoggle" onclick="toggleDiagram()">Показать диаграмму видов аудиторий</button>
-  <div id="piechart" style="margin: auto; margin-left: 100px; display: none"></div>
+  <div id="piechart" style="margin: auto; margin-left: 100px; opacity: 0;"></div>
 
 </div>
 </div>
@@ -95,6 +95,16 @@ $(this).toggle(re.test($(this).text()));
 
 <script>
   google.setOnLoadCallback(drawChart);
+
+  var deletedRooms = JSON.parse(localStorage.deletedRooms || '[]');
+  if (deletedRooms.length) {
+    for (var i = 0; i < deletedRooms.length; i++) {
+      $('.refer .list:contains(' + deletedRooms[i] + ')').remove();
+    }
+  }
+
+  $('#room-list').show();
+
   function randNumber() {
     return Math.floor((Math.random() * 100) + 1);
   }
@@ -116,11 +126,11 @@ $(this).toggle(re.test($(this).text()));
     chart.draw(data, options);
   }
   function toggleDiagram() {
-    if (piechart.style.display == 'none') {
-      piechart.style.display = '';
+    if (piechart.style.opacity == 0) {
+      piechart.style.opacity = 1;
       dtoggle.textContent = 'Скрыть диаграмму видов аудиторий';
     } else {
-      piechart.style.display = 'none';
+      piechart.style.opacity = 0;
       dtoggle.textContent = 'Показать диаграмму видов аудиторий';
     }
   }

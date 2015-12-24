@@ -197,8 +197,8 @@ button {
   display: block;
 
 }
-/* чек*/
-#but_save{
+
+#but_save, #but_remove{
   width: 140px;
   padding: 9px 13px;
   background: #FEFEFE;
@@ -212,127 +212,8 @@ button {
   background: linear-gradient(#F3F8F3,#E0EEE0);
   color: #004E63;
   font-weight: normal;
-  display: block;
-  margin: 20px 0 0px 55px;
-}/* чек*/
-#but_save{
-  width: 140px;
-  padding: 9px 13px;
-  background: #FEFEFE;
-  border: 1px solid #1F6A7F;
-  border-radius: 4px;
- font-size: 18px;
-  font-family: 'Carrois Gothic', sans-serif;
-  vertical-align: middle;
-  height: 35px;
-  cursor: pointer;
-  background: linear-gradient(#F3F8F3,#E0EEE0);
-  color: #004E63;
-  font-weight: normal;
-  display: block;
-  margin: 20px 0 0px 55px;
-}/* чек*/
-#but_save{
-  width: 140px;
-  padding: 9px 13px;
-  background: #FEFEFE;
-  border: 1px solid #1F6A7F;
-  border-radius: 4px;
- font-size: 18px;
-  font-family: 'Carrois Gothic', sans-serif;
-  vertical-align: middle;
-  height: 35px;
-  cursor: pointer;
-  background: linear-gradient(#F3F8F3,#E0EEE0);
-  color: #004E63;
-  font-weight: normal;
-  display: block;
-  margin: 20px 0 0px 55px;
-}/* чек*/
-#but_save{
-  width: 140px;
-  padding: 9px 13px;
-  background: #FEFEFE;
-  border: 1px solid #1F6A7F;
-  border-radius: 4px;
- font-size: 18px;
-  font-family: 'Carrois Gothic', sans-serif;
-  vertical-align: middle;
-  height: 35px;
-  cursor: pointer;
-  background: linear-gradient(#F3F8F3,#E0EEE0);
-  color: #004E63;
-  font-weight: normal;
-  display: block;
-  margin: 20px 0 0px 55px;
-}/* чек*/
-#but_save{
-  width: 140px;
-  padding: 9px 13px;
-  background: #FEFEFE;
-  border: 1px solid #1F6A7F;
-  border-radius: 4px;
- font-size: 18px;
-  font-family: 'Carrois Gothic', sans-serif;
-  vertical-align: middle;
-  height: 35px;
-  cursor: pointer;
-  background: linear-gradient(#F3F8F3,#E0EEE0);
-  color: #004E63;
-  font-weight: normal;
-  display: block;
-  margin: 20px 0 0px 55px;
-}/* чек*/
-#but_save{
-  width: 140px;
-  padding: 9px 13px;
-  background: #FEFEFE;
-  border: 1px solid #1F6A7F;
-  border-radius: 4px;
- font-size: 18px;
-  font-family: 'Carrois Gothic', sans-serif;
-  vertical-align: middle;
-  height: 35px;
-  cursor: pointer;
-  background: linear-gradient(#F3F8F3,#E0EEE0);
-  color: #004E63;
-  font-weight: normal;
-  display: block;
-  margin: 20px 0 0px 55px;
-}/* чек*/
-#but_save{
-  width: 140px;
-  padding: 9px 13px;
-  background: #FEFEFE;
-  border: 1px solid #1F6A7F;
-  border-radius: 4px;
- font-size: 18px;
-  font-family: 'Carrois Gothic', sans-serif;
-  vertical-align: middle;
-  height: 35px;
-  cursor: pointer;
-  background: linear-gradient(#F3F8F3,#E0EEE0);
-  color: #004E63;
-  font-weight: normal;
-  display: block;
-  margin: 20px 0 0px 55px;
-}/* чек*/
-#but_save{
-  width: 140px;
-  padding: 9px 13px;
-  background: #FEFEFE;
-  border: 1px solid #1F6A7F;
-  border-radius: 4px;
- font-size: 18px;
-  font-family: 'Carrois Gothic', sans-serif;
-  vertical-align: middle;
-  height: 35px;
-  cursor: pointer;
-  background: linear-gradient(#F3F8F3,#E0EEE0);
-  color: #004E63;
-  font-weight: normal;
-  display: block;
-  margin: 20px 0 0px 55px;
+  display: inline-block;
+  margin: 20px 0 0px 31px;
 }
 
 

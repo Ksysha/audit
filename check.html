@@ -95,6 +95,9 @@
     </div>
     </div>
 
+<div id='error_box'>
+	<p id='error_message'></p>
+	</div>
 
     <div class="check2">
       <label class="label"> Площадь аудитории </label>
@@ -109,6 +112,12 @@
 </div>
 </div>
 
+<script>
+    function but_saves() {
+        $('#error_message').html('Изменения сохранены');
+        $("#error_box").fadeIn(500).delay(3000).fadeOut(500);
+    }
+</script>
 
   <script>
     username.textContent = localStorage.login;

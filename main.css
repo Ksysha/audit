@@ -204,7 +204,8 @@ button {
   background: #FEFEFE;
   border: 1px solid #1F6A7F;
   border-radius: 4px;
-  font: 16px/18px Arial, Tahoma, sans-serif;
+ font-size: 18px;
+  font-family: 'Carrois Gothic', sans-serif;
   vertical-align: middle;
   height: 35px;
   cursor: pointer;
@@ -212,10 +213,128 @@ button {
   color: #004E63;
   font-weight: normal;
   display: block;
-  margin: 20px 0 0px 35px;
+  margin: 20px 0 0px 55px;
+}/* чек*/
+#but_save{
+  width: 140px;
+  padding: 9px 13px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+ font-size: 18px;
+  font-family: 'Carrois Gothic', sans-serif;
+  vertical-align: middle;
+  height: 35px;
+  cursor: pointer;
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  font-weight: normal;
+  display: block;
+  margin: 20px 0 0px 55px;
+}/* чек*/
+#but_save{
+  width: 140px;
+  padding: 9px 13px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+ font-size: 18px;
+  font-family: 'Carrois Gothic', sans-serif;
+  vertical-align: middle;
+  height: 35px;
+  cursor: pointer;
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  font-weight: normal;
+  display: block;
+  margin: 20px 0 0px 55px;
+}/* чек*/
+#but_save{
+  width: 140px;
+  padding: 9px 13px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+ font-size: 18px;
+  font-family: 'Carrois Gothic', sans-serif;
+  vertical-align: middle;
+  height: 35px;
+  cursor: pointer;
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  font-weight: normal;
+  display: block;
+  margin: 20px 0 0px 55px;
+}/* чек*/
+#but_save{
+  width: 140px;
+  padding: 9px 13px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+ font-size: 18px;
+  font-family: 'Carrois Gothic', sans-serif;
+  vertical-align: middle;
+  height: 35px;
+  cursor: pointer;
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  font-weight: normal;
+  display: block;
+  margin: 20px 0 0px 55px;
+}/* чек*/
+#but_save{
+  width: 140px;
+  padding: 9px 13px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+ font-size: 18px;
+  font-family: 'Carrois Gothic', sans-serif;
+  vertical-align: middle;
+  height: 35px;
+  cursor: pointer;
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  font-weight: normal;
+  display: block;
+  margin: 20px 0 0px 55px;
+}/* чек*/
+#but_save{
+  width: 140px;
+  padding: 9px 13px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+ font-size: 18px;
+  font-family: 'Carrois Gothic', sans-serif;
+  vertical-align: middle;
+  height: 35px;
+  cursor: pointer;
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  font-weight: normal;
+  display: block;
+  margin: 20px 0 0px 55px;
+}/* чек*/
+#but_save{
+  width: 140px;
+  padding: 9px 13px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+ font-size: 18px;
+  font-family: 'Carrois Gothic', sans-serif;
+  vertical-align: middle;
+  height: 35px;
+  cursor: pointer;
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  font-weight: normal;
+  display: block;
+  margin: 20px 0 0px 55px;
 }
 
-}
 
 #menu {
   padding: 0;
@@ -291,6 +410,11 @@ li.active {
    margin: 60px 0 0px 0;
 }
 
+.check{
+font-size: 16px;
+  font-family: 'Carrois Gothic', sans-serif;
+  padding:12px 0 0 0;
+}
 
 /* чек */
 .check2{

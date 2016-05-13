@@ -24,19 +24,19 @@
     <a href="index.html">Назад</a>
   </div>
   <div id="title">
-    <span id="building"></span>
+    <span id="building"><?php echo$_GET["corp"];?></span>
   </div>
   <div id="blocks">
-    <form id="auditor_Form" action="check.html" >
+    <form id="auditor_Form" action="check.php" method="POST">
       <span><h2>Выбор аудитории:</h2></span>
-      <input type="text" class="input" maxlength="30" placeholder="Введите номер аудитории" id="search"/>
-
-      <button id="button" onclick="setRoom()">Создать</button>
+      <input type="text" class="input" maxlength="30" placeholder="Введите номер аудитории" id="number" name="number" />
+      <input type="hidden" name="corp" value='<?php echo$_GET["corp"];?>'>
+      <button type="submit" id="button" onclick="setRoom()">Создать</button>
     </form>
 
     <form action="check.html" id="room-list" style="display: none;">
       <ul>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">105</li></a>
+        <a href="check.html?room_id=105" class="refer" onclick="setRoom(this)"><li class="list">105</li></a>
         <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">142</li></a>
         <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">230</li></a>
         <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">232</li></a>
@@ -78,7 +78,7 @@
 <script type='text/javascript'>
 
 $(function() {
-$('#search').keyup(function() {
+$('#number').keyup(function() {
 var val = this.value;
 var re = new RegExp('^' + val,'i');
 $('#room-list a').each(function (){
@@ -87,7 +87,7 @@ $(this).toggle(re.test($(this).text()));
 });
 });
     username.textContent = localStorage.login;
-    building.textContent = localStorage.building;
+   //<!-- building.textContent = localStorage.building;-->
 </script>
 
 <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>

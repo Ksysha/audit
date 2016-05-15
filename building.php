@@ -72,6 +72,22 @@
 </div>
 </div>
 
+<?php
+  if($_GET["success"] == 'true') :
+    echo "<div id='error_box'>
+        <p id='error_message'></p>
+      </div>";
+?>
+<script type="text/javascript">
+  $('#error_message').html('Изменения сохранены');
+  $("#error_box").fadeIn(500).delay(1500).fadeOut(500);
+</script>
+
+<?php
+  else:
+    endif;
+?>
+
 
 
 <!-- при вводе номера аудитории сортируется список "по совпедению"  -->

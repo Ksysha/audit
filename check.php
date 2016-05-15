@@ -116,11 +116,6 @@
   </div>
 
   <script>
-    function but_saves() {
-        $('#error_message').html('Изменения сохранены');
-        $("#error_box").fadeIn(500).delay(3000).fadeOut(500);
-    }
-
     function deleteRoom() {
       var result = confirm('Вы действительно хотите удалить эту аудиторию?');
       if (result) {

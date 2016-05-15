@@ -471,7 +471,6 @@ div.back {
 
 
 #error_box{
-	display: none;
 	text-align: center;
 	background: linear-gradient(#F3F8F3,#E0EEE0);
 	position: absolute;
@@ -483,6 +482,8 @@ div.back {
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	text-align: center;
+  top: 94px;
+  left: 540px;
 }
 #error_message {
 	color: #004E63;

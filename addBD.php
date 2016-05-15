@@ -12,6 +12,12 @@
       $result = (mb_strlen($value) < $min || mb_strlen($value) > $max);
       return !$result;
   }
+  function rollback_db() {
+      mysqli_query($db, 'ROLLBACK');
+      echo "<div class='popup'>Ваши данные не добавлены</div>";
+      mysqli_close($db);
+  }
+
   if(!$db) {
     echo "<h2>MySQL Error!</h2>";
     exit;
@@ -45,15 +51,57 @@
     }
 
     mysqli_select_db ( $db , $dbname );
+    mysqli_query($db,'SET AUTOCOMMIT=0');
+    mysqli_query($db,'START TRANSACTION');
+
     $result = mysqli_query($db,"
         INSERT INTO Auditorium (Number, Corps_id, Type, Capacity, CountSeats, TableType, Sockets, Conditioner, Area, Date) VALUES('$Number', '$corp', '$Type', '$Capacity', '$CountSeats', '$TableType', '$socket', '$conditioner', '$area', '$datePublic')
         ");
-    if ($result== 'true') {
-        echo "<div class='popup'>Ваши данные успешно добавлены</div>";
-      }
-    else {
-        echo "<div class='popup'>Ваши данные не добавлены</div>";
+    if ($result) {
+        $Auditorium_id = mysqli_insert_id($db);
+    } else {
+        return rollback_db($db);
     }
+
+    if (isset($_POST["computer"]) && isset($_POST["computerCount"])) {
+        $computer = $_POST["computer"];
+        $computerCount = $_POST["computerCount"];
+        $result = mysqli_query($db,"
+        INSERT INTO Auditorium_Equipment (Equipment_id, Auditorium_id,  Amount) VALUES('$computer', '$Auditorium_id', '$computerCount')
+        ");
+
+        if (!$result) {
+          return rollback_db();
+        }
+    }
+
+    if (isset($_POST["projector"])) {
+        $projector = $_POST["projector"];
+        $projectorCount = 1;
+        $result = mysqli_query($db,"
+        INSERT INTO Auditorium_Equipment (Equipment_id, Auditorium_id,  Amount) VALUES('$projector', '$Auditorium_id', '$projectorCount')
+        ");
+
+        if (!$result) {
+          return rollback_db();
+        }
+    }
+
+    if (isset($_POST["special"])) {
+        $special = $_POST["special"];
+        $specialCount = 1;
+        $result = mysqli_query($db,"
+        INSERT INTO Auditorium_Equipment (Equipment_id, Auditorium_id,  Amount) VALUES('$special', '$Auditorium_id', '$specialCount')
+        ");
+
+        if (!$result) {
+          return rollback_db();
+        }
+    }
+
+    mysqli_query($db, 'COMMIT');
+    echo "<div class='popup'>Ваши данные добавлены</div>";
     mysqli_close($db);
+    header("Location: /audit/building.php?corp={$corp}&success=true");
   }
 ?>

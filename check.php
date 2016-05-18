@@ -100,10 +100,6 @@
         <label class="label" for="conditioner">Наличие кондиционеров</label>
       </div>
 
-      <div id='error_box'>
-      	<p id='error_message'></p>
-      </div>
-
       <div class="check2">
         <label class="label"> Площадь аудитории </label>
         <input type="number" class="check2_num" id="area" name="area" value="Area" required />

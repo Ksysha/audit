@@ -1,3 +1,4 @@
+<?php include_once("config.php"); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -24,7 +25,18 @@
     <a href="index.html">Назад</a>
   </div>
   <div id="title">
-    <span id="building"><?php echo$_GET["corp"];?></span>
+    <span id="building">
+    <?php
+      $corp = $_GET["corp"];
+      mysqli_select_db ( $db , $dbname );
+      $result = mysqli_query($db,"
+        SELECT Name FROM Corps WHERE id='$corp'
+        ");
+      $row = mysqli_fetch_row($result);
+      echo $row[0];
+      mysqli_close($db);
+    ?>
+    </span>
   </div>
   <div id="blocks">
     <form id="auditor_Form" action="check.php" method="POST">
@@ -33,11 +45,25 @@
       <input type="hidden" name="corp" value='<?php echo$_GET["corp"];?>'>
       <button type="submit" id="button" onclick="setRoom()">Создать</button>
     </form>
+ <!-- <?php
+      $corp = $_GET["corp"];
+      mysqli_select_db ($db , $dbname );
+      $result = mysqli_query($db,"
+        SELECT NumberAudit FROM Auditorium WHERE Corps_id='$corp'
+        ");
 
-    <form action="check.html" id="room-list" style="display: none;">
+      while($rows_res = mysqli_fetch_array($result)){
+        $name_company = $rows_res['CompanyName'];
+        $id_company = $rows_res['IDCompany'];
+      }
+      $row = mysqli_fetch_row($result);
+      echo $row[0];
+      mysqli_close($db);
+    ?> -->
+    <form action="check.php" id="room-list" style="display: none;">
       <ul>
-        <a href="check.html?room_id=105" class="refer" onclick="setRoom(this)"><li class="list">105</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">142</li></a>
+        <a href="check.php?room_id=105" class="refer" onclick="setRoom(this)"><li class="list">105</li></a>
+        <a href="check.php" class="refer" onclick="setRoom(this)"><li class="list">142</li></a>
         <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">230</li></a>
         <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">232</li></a>
         <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">240</li></a>

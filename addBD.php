@@ -55,7 +55,7 @@
     mysqli_query($db,'START TRANSACTION');
 
     $result = mysqli_query($db,"
-        INSERT INTO Auditorium (Number, Corps_id, Type, Capacity, CountSeats, TableType, Sockets, Conditioner, Area, Date) VALUES('$Number', '$corp', '$Type', '$Capacity', '$CountSeats', '$TableType', '$socket', '$conditioner', '$area', '$datePublic')
+        INSERT INTO Auditorium (NumberAudit, Corps_id, Type, Capacity, CountSeats, TableType, Sockets, Conditioner, Area, Date) VALUES('$Number', '$corp', '$Type', '$Capacity', '$CountSeats', '$TableType', '$socket', '$conditioner', '$area', '$datePublic')
         ");
     if ($result) {
         $Auditorium_id = mysqli_insert_id($db);

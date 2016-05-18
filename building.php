@@ -34,61 +34,39 @@
         ");
       $row = mysqli_fetch_row($result);
       echo $row[0];
-      mysqli_close($db);
     ?>
     </span>
   </div>
   <div id="blocks">
-    <form id="auditor_Form" action="check.php" method="POST">
+    <form id="auditor_Form" action="check.php" method="GET">
       <span><h2>Выбор аудитории:</h2></span>
       <input type="text" class="input" maxlength="30" placeholder="Введите номер аудитории" id="number" name="number" />
       <input type="hidden" name="corp" value='<?php echo$_GET["corp"];?>'>
       <button type="submit" id="button" onclick="setRoom()">Создать</button>
     </form>
- <!-- <?php
-      $corp = $_GET["corp"];
+     <?php
+     $corp = $_GET["corp"];
       mysqli_select_db ($db , $dbname );
       $result = mysqli_query($db,"
         SELECT NumberAudit FROM Auditorium WHERE Corps_id='$corp'
         ");
 
       while($rows_res = mysqli_fetch_array($result)){
-        $name_company = $rows_res['CompanyName'];
-        $id_company = $rows_res['IDCompany'];
+        $NumberAudit[] = $rows_res[0];
       }
-      $row = mysqli_fetch_row($result);
-      echo $row[0];
       mysqli_close($db);
-    ?> -->
-    <form action="check.php" id="room-list" style="display: none;">
-      <ul>
-        <a href="check.php?room_id=105" class="refer" onclick="setRoom(this)"><li class="list">105</li></a>
-        <a href="check.php" class="refer" onclick="setRoom(this)"><li class="list">142</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">230</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">232</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">240</li></a>
-      </ul>
-      <ul>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">739</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">685</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">20</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">456</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">171</li></a>
-      </ul>
-      <ul>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">185</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">116a</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">116b</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">505</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">102</li></a>
-      </ul>
-      <ul>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">312</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">316</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">335</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">218</li></a>
-        <a href="check.html" class="refer" onclick="setRoom(this)"><li class="list">101</li></a>
-      </ul>
+    ?>
+    <form action='check.php' id='room-list' method="GET">
+    <?php
+      if (!empty($NumberAudit)) {
+        for ($i=0; $i < count($NumberAudit); $i++) {
+        echo "<div class='auditorii'><a class='refer' href='check.php?corp={$_GET["corp"]}&room_id={$NumberAudit[$i]}'  onclick='setRoom(this)'>$NumberAudit[$i]</a></div>";
+        }
+      }
+      else {
+        echo "<div class='text'><p>Здесь пока нет аудиторий</p></div>";
+      }
+    ?>
     </form>
   </div>
 
@@ -99,7 +77,7 @@
 </div>
 
 <?php
-  if($_GET["success"] == 'true') :
+  if(isset($_GET["success"]) && $_GET["success"] == 'true') :
     echo "<div id='error_box'>
         <p id='error_message'></p>
       </div>";
@@ -144,8 +122,6 @@ $(this).toggle(re.test($(this).text()));
       $('.refer .list:contains(' + deletedRooms[i] + ')').remove();
     }
   }
-
-  $('#room-list').show();
 
   function randNumber() {
     return Math.floor((Math.random() * 100) + 1);

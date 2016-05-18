@@ -54,7 +54,7 @@ h1 {
 }
 
 h2{
-  margin: 0 0 0 69px;
+  /*margin: 0 0 0 69px;*/
   padding: 0 0 5px 0;
   color: #004E63;
   font-weight: normal;
@@ -71,10 +71,6 @@ ul{
 
 li{
   list-style-type: none;
-}
-
-#auditor_Form {
-  margin-left: 190px;
 }
 
 .list{
@@ -112,7 +108,7 @@ button {
   border-radius: 15px;
   color: #004E63;
   font-weight: normal;
-  font-size: 23px;
+  font-size: 20px;
   width: 23%;
   /* margin: 19px 16px; */
   margin-right: 3px;
@@ -137,7 +133,7 @@ button {
   vertical-align: super;
   color: #004E63;
   font-weight: normal;
-  font-size: 25px;
+  font-size: 23px;
   font-family: 'Carrois Gothic', sans-serif;
 }
 
@@ -158,11 +154,14 @@ button {
 
 .refer {
   text-decoration: none !important;
+  color: #004E63;
+  display: block;
 }
 
 /* аудитории*/
 #blocks{
-  margin: 40px 0 0 25px;
+  margin: 35px 0;
+  text-align: center;
 }
 /* аудитории*/
 #number{
@@ -179,7 +178,15 @@ button {
   outline: none;
   font: 14px/18px Arial, Tahoma, sans-serif;
 }
+#auditorForm {
+  padding-bottom: 25px;
+}
 /* аудитории*/
+#auditor_Form{
+  margin: auto;
+  width: 300px;
+
+}
 #blocks button{
   width: 288px;
   padding: 9px 13px;
@@ -558,3 +565,24 @@ div.back {
 }
 /* Показываем получение фокуса. */
 
+#room-list {
+  margin-top: 25px;
+}
+.auditorii {
+  display: inline-block;
+  margin-right: 25px;
+  width: 130px;
+  padding: 5px 10px;
+  margin: 6px;
+  background: #FEFEFE;
+  border: 1px solid #1F6A7F;
+  border-radius: 4px;
+  font: 14px/18px Arial, Tahoma, sans-serif;
+  vertical-align: middle;
+  color: #004E63;
+}
+.text {
+    font: 20px/18px Arial, Tahoma, sans-serif;
+    color: #004E63;
+    font-weight: normal;
+}

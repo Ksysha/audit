@@ -54,7 +54,6 @@
       while($rows_res = mysqli_fetch_array($result)){
         $NumberAudit[] = $rows_res[0];
       }
-      mysqli_close($db);
     ?>
     <form action='check.php' id='room-list' method="GET">
     <?php
@@ -70,7 +69,7 @@
     </form>
   </div>
 
-  <button class="digramm" id="dtoggle" onclick="toggleDiagram()">Показать диаграмму видов аудиторий</button>
+  <button <?php if (empty($NumberAudit)) :?> style="display : none" <?php else: endif; ?> class="digramm" id="dtoggle" onclick="toggleDiagram()">Показать диаграмму видов аудиторий</button>
   <div id="piechart" style="margin: auto; margin-left: 100px; opacity: 0;"></div>
 
 </div>
@@ -112,6 +111,49 @@ $(this).toggle(re.test($(this).text()));
 
 <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
 
+<!-- Для диаграмки данные -->
+<?php
+  mysqli_select_db ($db , $dbname );
+  $result = mysqli_query($db,"
+  SELECT  count(id), Type FROM Auditorium WHERE Corps_id='$corp' GROUP BY Type
+  ");
+  while($rows_res = mysqli_fetch_array($result)) {
+    $count[] = $rows_res[0];
+    $Type[] = $rows_res[1];
+  }
+  if(isset($Type) && !empty($Type)) {
+    if (!in_array('Компьютерная', $Type)) {
+      $countComp = 0;
+    }
+    else {
+      $a = array_search('Компьютерная', $Type);
+      $countComp = $count[$a];
+    }
+    if (!in_array('Лаборатория', $Type)) {
+      $countLaborator = 0;
+    }
+    else {
+      $a = array_search('Лаборатория', $Type);
+      $countLaborator = $count[$a];
+    }
+    if (!in_array('Практическая', $Type)) {
+      $countPractic = 0;
+    }
+    else {
+      $a = array_search('Практическая', $Type);
+      $countPractic = $count[$a];
+    }
+    if (!in_array('Лекционная', $Type)) {
+      $countLecture = 0;
+    }
+    else {
+      $a = array_search('Лекционная', $Type);
+      $countLecture = $count[$a];
+    }
+  }
+  mysqli_close($db);
+?>
+
 
 <script>
   google.setOnLoadCallback(drawChart);
@@ -127,12 +169,13 @@ $(this).toggle(re.test($(this).text()));
     return Math.floor((Math.random() * 100) + 1);
   }
   function drawChart() {
+    console.log(<?php echo $countComp; ?>);
     var data = google.visualization.arrayToDataTable([
       ['Type', 'Number'],
-      ['Лекции',  randNumber()],
-      ['Практики', randNumber()],
-      ['Компьютерные', randNumber()],
-      ['Лабораторные', randNumber()]
+      ['Лекционные',  <?php echo $countLecture; ?>],
+      ['Практические', <?php echo $countPractic; ?>],
+      ['Компьютерные', <?php echo $countComp; ?>],
+      ['Лабораторные', <?php echo $countLaborator; ?>]
     ]);
     var options = {
       title: 'Виды аудиторий в здании',

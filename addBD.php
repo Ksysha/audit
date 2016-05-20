@@ -53,7 +53,8 @@
     mysqli_select_db ( $db , $dbname );
     mysqli_query($db,'SET AUTOCOMMIT=0');
     mysqli_query($db,'START TRANSACTION');
-    if($_POST["id"]) {
+
+    if(!empty($_POST["id"])) {
       $id = $_POST["id"];
       $result = mysqli_query($db,"
         UPDATE Auditorium SET NumberAudit='$Number', Type='$Type', Capacity='$Capacity', CountSeats='$CountSeats', TableType='$TableType', Sockets='$socket', Conditioner='$conditioner', Area='$area', Date='$datePublic' WHERE id=$id

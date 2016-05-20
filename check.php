@@ -71,7 +71,7 @@
           <option value=""></option>
           <option <?php if(!empty($Type) && $Type == 'Лекционная') :?> selected <?php else: endif; ?> value="Лекционная">Лекционная</option>
           <option <?php if(!empty($Type) && $Type == 'Практическая') :?> selected <?php else: endif; ?> value="Практическая">Практическая</option>
-          <option <?php if(!empty($Type) && $Type == 'Компьютерный класс') :?> selected <?php else: endif; ?> value="Компьютерный класс">Компьютерный класс</option>
+          <option <?php if(!empty($Type) && $Type == 'Компьютерная') :?> selected <?php else: endif; ?> value="Компьютерная">Компьютерная</option>
           <option <?php if(!empty($Type) && $Type == 'Лаборатория') :?> selected <?php else: endif; ?> value="Лаборатория">Лаборатория</option>
           </select>
         </p>

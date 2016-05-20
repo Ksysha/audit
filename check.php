@@ -21,7 +21,7 @@
     </div>
     <hr/>
     <div class = "exit back">
-      <a href="building.html">Назад</a>
+      <a href='building.php?corp=<?php echo$_GET["corp"]?>'>Назад</a>
     </div>
     <div id="title">
       <span id="building"></span>
@@ -36,6 +36,7 @@
           SELECT * FROM Auditorium WHERE Corps_id='$corp' AND NumberAudit='$room_id'
           ");
         $rows_res = mysqli_fetch_array($result);
+        $id = $rows_res[0];
         $Type = $rows_res[3];
         $Capacity = $rows_res[4];
         $CountSeats = $rows_res[5];
@@ -55,11 +56,14 @@
       }
     ?>
     <form method="post" id="auditorForm" action="addBD.php">
+    <?php if(isset($id) && !empty($id)) :?>
+      <input type="hidden" name="id" value='<?php echo$id;?>'>
+    <?php else: endif; ?>
       <div class="check2">
         <label class="label"> Номер аудитории </label>
         <input type="number" class="check2_num" id="Number" name="Number" required="" value='<?php echo $room_id;?>'/>
       </div>
-      <input type="hidden" name="corp" value='<?php echo$_POST["corp"];?>'>
+      <input type="hidden" name="corp" value='<?php echo$_GET["corp"];?>'>
       <div class="check2">
         <p>
         <label class="label">Тип аудитории:</label>
@@ -102,6 +106,7 @@
           <label><input type="checkbox" <?php if(!empty($computerChecked) && $computerChecked) :?> checked <?php else: endif; ?> name="computer" id="computer" onclick="toggleState(this)" value="1" />Компьютеры</label>
         </div>   <!-- компютеры -->
         <?php
+        if (!empty($room_id)) {
           mysqli_select_db ($db , $dbname );
           $result2 = mysqli_query($db,"
           SELECT  Amount FROM Auditorium_Equipment WHERE Equipment_id=1 AND Auditorium_id=(SELECT id FROM Auditorium WHERE NumberAudit='$room_id')
@@ -109,8 +114,9 @@
           $rows_res2 = mysqli_fetch_array($result2);
           $Amount = $rows_res2[0];
           mysqli_close($db);
+        }
         ?>
-        <div class="check2_1" id="div_computer" style=<?php if (!empty($computerChecked) && !$computerChecked) :?>"display : none"<?php else: endif; ?>>
+        <div class="check2_1" id="div_computer" style=<?php if (!isset($computerChecked) || (!empty($computerChecked) && !$computerChecked) || (!$computerChecked)) :?>"display : none"<?php else: endif; ?>>
           <label class="label_"> Количество компьютеров </label>
           <input type="number" value='<?php echo $Amount;?>' class="check2_num_" id="computerCount" name="computerCount" />
         </div>

@@ -82,7 +82,7 @@
       </div>";
 ?>
 <script type="text/javascript">
-  $('#error_message').html('Изменения сохранены');
+  $('#error_message').html('Аудитория добавлена');
   $("#error_box").fadeIn(500).delay(1500).fadeOut(500);
 </script>
 
@@ -90,7 +90,36 @@
   else:
     endif;
 ?>
+<?php
+  if(isset($_GET["update"]) && $_GET["update"] == 'true') :
+    echo "<div id='error_box'>
+        <p id='error_message'></p>
+      </div>";
+?>
+<script type="text/javascript">
+  $('#error_message').html('Данные обновлены');
+  $("#error_box").fadeIn(500).delay(1500).fadeOut(500);
+</script>
 
+<?php
+  else:
+    endif;
+?>
+<?php
+  if(isset($_GET["destroy"]) && $_GET["destroy"] == 'true') :
+    echo "<div id='error_box'>
+        <p id='error_message'></p>
+      </div>";
+?>
+<script type="text/javascript">
+  $('#error_message').html('Аудитория удалена');
+  $("#error_box").fadeIn(500).delay(1500).fadeOut(500);
+</script>
+
+<?php
+  else:
+    endif;
+?>
 
 
 <!-- при вводе номера аудитории сортируется список "по совпедению"  -->

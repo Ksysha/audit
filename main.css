@@ -201,7 +201,29 @@ button {
   color: #004E63;
   font-weight: normal;
   display: block;
-
+  line-height: 13px;
+}
+.b {
+  display: inline-block;
+}
+.delete {
+      width: 122px;
+    padding: 9px 13px;
+    background: #FEFEFE;
+    border: 1px solid #1F6A7F;
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: 'Carrois Gothic', sans-serif;
+    vertical-align: middle;
+    height: 32px;
+    cursor: pointer;
+    background: linear-gradient(#F3F8F3,#E0EEE0);
+    color: #004E63;
+    font-weight: normal;
+    display: inline-block;
+    margin: 20px 0 0px 36px;
+    left: 129px;
+    line-height: 13px;
 }
 #but_save{
   width: 122px;
@@ -219,6 +241,7 @@ button {
   font-weight: normal;
   display: inline-block;
   margin: 20px 0 0px 36px;
+  line-height: 13px;
 }
 
 #but_remove{
@@ -237,17 +260,8 @@ button {
   font-weight: normal;
   display: inline-block;
   margin: 20px 0 0px 15px;
+  line-height: 13px;
 }
-
-<<<<<<< HEAD
-
-
-=======
-
-
->>>>>>> 3dd42fe920917140ff3c9f3640e9254bbdabfd1c
-
-
 #menu {
   padding: 0;
   margin: 0;
@@ -472,10 +486,15 @@ input::-webkit-outer-spin-button {
 div.back {
   display: inline-block;
   position: relative;
-  top: 19px;
+  top: 10px;
   left: 25px;
 }
-
+div.delete {
+  display: inline-block;
+  position: relative;
+  top: 19px;
+  left: 550px;
+}
 
 #error_box{
 	text-align: center;
@@ -585,4 +604,8 @@ div.back {
     font: 20px/18px Arial, Tahoma, sans-serif;
     color: #004E63;
     font-weight: normal;
+}
+.a {
+  display: inline-block;
+  margin-right: 500px;
 }

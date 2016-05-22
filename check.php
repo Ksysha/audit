@@ -20,13 +20,11 @@
       </div>
     </div>
     <hr/>
-    <div class = "exit back">
-      <a href='building.php?corp=<?php echo$_GET["corp"]?>'>Назад</a>
-    </div>
-    <div id="title">
-      <span id="building"></span>
-      <span id="room"></span>
-    </div>
+    <form action="" class="a">
+      <div class = "exit back">
+        <a href='building.php?corp=<?php echo$_GET["corp"]?>'>Назад</a>
+      </div>
+    </form>
     <?php
       if(isset($_GET["room_id"]) && !empty($_GET["room_id"])) {
         $room_id = $_GET["room_id"];
@@ -55,6 +53,20 @@
         }
       }
     ?>
+    <?php if(isset($id) && !empty($id)) :?>
+      <form method="post" action="delete.php" class="b">
+        <button onclick="return confirm('Вы действительно хотите удалить аудиторию?')" type="submit" class="delete">Удалить</button>
+          <!-- <a href='building.php?corp=<?php echo$_GET["corp"]?>'>Удалить</a> -->
+        <input type="hidden" name="id" value='<?php echo$id;?>'>
+        <input type="hidden" name="corp" value='<?php echo$_GET["corp"];?>'>
+      </form>
+    <?php else: endif; ?>
+
+    <div id="title">
+      <span id="building"></span>
+      <span id="room"></span>
+    </div>
+
     <form method="post" id="auditorForm" action="addBD.php">
     <?php if(isset($id) && !empty($id)) :?>
       <input type="hidden" name="id" value='<?php echo$id;?>'>

@@ -150,9 +150,8 @@
       }
 
       mysqli_query($db, 'COMMIT');
-      echo "<div class='popup'>Ваши данные обновлены</div>";
       mysqli_close($db);
-      header("Location: /audit/building.php?corp={$corp}&success=true");
+      header("Location: /audit/building.php?corp={$corp}&update=true");
     }
     else {
       $result = mysqli_query($db,"
@@ -201,7 +200,6 @@
       }
 
       mysqli_query($db, 'COMMIT');
-      echo "<div class='popup'>Ваши данные добавлены</div>";
       mysqli_close($db);
       header("Location: /audit/building.php?corp={$corp}&success=true");
     }

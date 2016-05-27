@@ -1,4 +1,6 @@
-<?php include_once("config.php"); ?>
+<?php include_once("config.php"); 
+include_once("is_sign.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,19 +12,19 @@
 <body>
 
 <div id="main">
-  <a href="index.html"><img src="polytech_logo.svg" id="logo"></a>
+  <a href="index.php"><img src="polytech_logo.svg" id="logo"></a>
   <div id="authorized">
     <img src="icon3.png" id="icon">
     <span id="username"></span>
     <div class = "exit">
       <a href="instruction.html">Инструкции</a>
-      <a href="sign_in.html" >Выход</a>
+      <a href="exit.php" >Выход</a>
     </div>
   </div>
 
   <hr>
   <div class = "exit back">
-    <a href="index.html">Назад</a>
+    <a href="index.php">Назад</a>
   </div>
   <div id="title">
     <span id="building">

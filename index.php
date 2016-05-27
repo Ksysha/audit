@@ -1,3 +1,7 @@
+<?php
+	
+	if (isset($_COOKIE['log'])){	
+	echo '
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -10,19 +14,19 @@
 
   <body>
     <div id="main">
-      <a href="index.html"><img src="polytech_logo.svg" id="logo"></a>
+      <a href="index.php"><img src="polytech_logo.svg" id="logo"></a>
       <div id="authorized">
       <img src="icon3.png" id="icon">
       <span id="username"></span>
       <div class = "exit">
         <a href="instruction.html">Инструкции</a>
-        <a href="sign_in.html" >Выход</a>
+        <a href="exit.php" >Выход</a>
       </div>
       </div>
 
 
       <ul id="menu">
-        <a href="index.html">
+        <a href="index.php">
           <li class="active">Список Зданий</li>
         </a>
         <a href="auditory_projector.html">
@@ -82,4 +86,10 @@
       }
     </script>
   </body>
-</html>
+</html>';
+	
+	}
+	else {
+		header("Location: /audit/sign_in.html");
+	}
+?>

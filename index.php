@@ -82,7 +82,7 @@
       username.textContent = localStorage.login;
 
       function setBuilding(link) {
-        localStorage.setItem('building', link.getAttribute('data-ot'));
+        localStorage.setItem("building", link.getAttribute("data-ot"));
       }
     </script>
   </body>

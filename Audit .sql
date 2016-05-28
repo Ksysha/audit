@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Май 20 2016 г., 19:33
+-- Время создания: Май 28 2016 г., 11:47
 -- Версия сервера: 10.1.10-MariaDB
 -- Версия PHP: 7.0.2
 
@@ -37,7 +37,7 @@ CREATE TABLE `Auditorium` (
   `Sockets` int(3) NOT NULL,
   `Conditioner` tinyint(1) NOT NULL,
   `Area` int(5) NOT NULL,
-  `Date` date NOT NULL
+  `Date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -45,12 +45,14 @@ CREATE TABLE `Auditorium` (
 --
 
 INSERT INTO `Auditorium` (`id`, `NumberAudit`, `Corps_id`, `Type`, `Capacity`, `CountSeats`, `TableType`, `Sockets`, `Conditioner`, `Area`, `Date`) VALUES
-(78, 102, 6, 'Практическая', 2, 2, 'Амфитеатр', 3, 1, 34, '2016-05-19'),
-(89, 324, 6, 'Компьютерная', 10, 10, 'Компьютерные столы', 1, 1, 1, '2016-05-20'),
-(90, 123, 6, 'Практическая', 2, 3, 'Компьютерные столы', 2, 1, 2, '2016-05-20'),
-(91, 111, 6, 'Лекционная', 1, 1, 'Парты', 1, 0, 1, '2016-05-20'),
-(92, 100, 6, 'Лаборатория', 12, 2, 'Парты', 2, 0, 2, '2016-05-20'),
-(93, 316, 10, 'Лекционная', 20, 20, 'Парты', 2, 1, 2, '2016-05-20');
+(89, 324, 6, 'Компьютерная', 10, 10, 'Компьютерные столы', 1, 1, 1, '2016-05-21 21:00:00'),
+(92, 100, 6, 'Лаборатория', 12, 2, 'Парты', 2, 0, 2, '2016-05-20 21:00:00'),
+(93, 316, 10, 'Лекционная', 20, 20, 'Парты', 2, 1, 2, '2016-05-19 21:00:00'),
+(94, 111, 6, 'Компьютерная', 12, 12, 'Амфитеатр', 12, 1, 1, '2016-05-21 21:00:00'),
+(95, 102, 2, 'Компьютерная', 2, 23, 'Амфитеатр', 2, 1, 23, '2016-05-21 21:00:00'),
+(96, 22, 0, 'Лекционная', 2, 2, 'Компьютерные столы', 2, 1, 2, '2016-05-26 21:00:00'),
+(97, 23, 6, 'Лекционная', 2, 2, 'Амфитеатр', 2, 1, 2, '2016-05-26 21:00:00'),
+(98, 123, 1, 'Практическая', 12, 12, 'Амфитеатр', 2, 1, 2, '2016-05-26 21:00:00');
 
 -- --------------------------------------------------------
 
@@ -71,10 +73,13 @@ CREATE TABLE `Auditorium_Equipment` (
 
 INSERT INTO `Auditorium_Equipment` (`id`, `Equipment_id`, `Auditorium_id`, `Amount`) VALUES
 (43, 3, 89, 1),
-(44, 1, 90, 2),
-(45, 2, 91, 1),
 (46, 2, 92, 1),
-(47, 3, 93, 1);
+(47, 3, 93, 1),
+(48, 2, 94, 1),
+(49, 2, 95, 1),
+(50, 1, 96, 2),
+(51, 1, 97, 2),
+(52, 3, 98, 1);
 
 -- --------------------------------------------------------
 
@@ -135,8 +140,16 @@ CREATE TABLE `Equipment` (
 CREATE TABLE `Users` (
   `id` int(4) NOT NULL,
   `Login` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
-  `Password` varchar(25) COLLATE utf8_unicode_ci NOT NULL
+  `Password` char(32) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `Users`
+--
+
+INSERT INTO `Users` (`id`, `Login`, `Password`) VALUES
+(3, 'admin', '21232f297a57a5a743894a0e4a801fc3'),
+(4, 'ksysha', '21232f297a57a5a743894a0e4a801fc3');
 
 --
 -- Индексы сохранённых таблиц
@@ -185,12 +198,12 @@ ALTER TABLE `Users`
 -- AUTO_INCREMENT для таблицы `Auditorium`
 --
 ALTER TABLE `Auditorium`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 --
 -- AUTO_INCREMENT для таблицы `Auditorium_Equipment`
 --
 ALTER TABLE `Auditorium_Equipment`
-  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+  MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 --
 -- AUTO_INCREMENT для таблицы `Corps`
 --
@@ -205,7 +218,7 @@ ALTER TABLE `Equipment`
 -- AUTO_INCREMENT для таблицы `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --

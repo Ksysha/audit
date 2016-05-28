@@ -1,4 +1,4 @@
-<?php include_once("config.php"); 
+<?php include_once("config.php");
 include_once("is_sign.php");
 ?>
 <!DOCTYPE html>
@@ -48,7 +48,7 @@ include_once("is_sign.php");
 
         mysqli_select_db ($db , $dbname );
         $result1 = mysqli_query($db,"
-          SELECT Equipment_id FROM Auditorium_Equipment WHERE Auditorium_id=(SELECT id FROM Auditorium WHERE NumberAudit='$room_id')
+          SELECT Equipment_id FROM Auditorium_Equipment WHERE Auditorium_id=(SELECT id FROM Auditorium WHERE NumberAudit='$room_id' AND Corps_id=$corp)
           ");
         while ($rows_res1 = mysqli_fetch_array($result1)) {
           $Equipment_id[] = $rows_res1[0];
@@ -123,7 +123,7 @@ include_once("is_sign.php");
         if (!empty($room_id)) {
           mysqli_select_db ($db , $dbname );
           $result2 = mysqli_query($db,"
-          SELECT  Amount FROM Auditorium_Equipment WHERE Equipment_id=1 AND Auditorium_id=(SELECT id FROM Auditorium WHERE NumberAudit='$room_id')
+          SELECT  Amount FROM Auditorium_Equipment WHERE Equipment_id=1 AND Auditorium_id=(SELECT id FROM Auditorium WHERE NumberAudit='$room_id' AND Corps_id=$corp)
           ");
           $rows_res2 = mysqli_fetch_array($result2);
           $Amount = $rows_res2[0];

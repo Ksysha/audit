@@ -1,3 +1,6 @@
+<?php include_once("config.php"); 
+include_once("is_sign.php");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,18 +19,18 @@
     <span id="username"></span>
     <div class = "exit">
       <a href="instruction.html">Инструкции</a>
-      <a href="sign_in.html" >Выход</a>
+      <a href="exit.php" >Выход</a>
     </div>
 </div>
 
   <ul id="menu">
-    <a href="index.html">
+    <a href="index.php">
       <li>Список Зданий</li>
     </a>
-    <a href="auditory_projector.html">
+    <a href="auditory_projector.php">
       <li>Аудитории с проектором</li>
     </a>
-    <a href="big_auditor.html">
+    <a href="big_auditor.php">
       <li class="active">Большие аудитории</li>
     </a>
   </ul>

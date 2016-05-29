@@ -38,6 +38,29 @@ include_once("is_sign.php");
 </div>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
+<!-- Для диаграмки данные -->
+<?php
+  mysqli_select_db ($db , $dbname );
+  $result = mysqli_query($db,"
+  SELECT  count(id), Corps_id FROM Auditorium 
+  WHERE capacity > '25' GROUP BY Corps_id
+  ");
+  while($rows_res = mysqli_fetch_array($result)) {
+    $count[] = $rows_res[0];
+    $corp_id[] = $rows_res[1];
+  }
+  
+  for ($i=1;$i<21;$i++){
+	  if (!in_array($i, $corp_id)) {
+	  $a[$i]=0;
+	  }
+	  else {
+		  $a[$i]=$count[array_search($i, $corp_id)];
+		}
+  }
+  mysqli_close($db);
+?>
+
 <script>
     function doLogin(form) {
       localStorage.setItem('login', form.login.value); // сохраняем наш логин в куки у пользователя на компе
@@ -59,26 +82,26 @@ function drawBasic() {
 
       var data = google.visualization.arrayToDataTable([
         ['Здание', 'Большие аудитории',],
-        ['1 к.', randNumber()],
-        ['2 к.', randNumber()],
-        ['3 к.', randNumber()],
-        ['4 к.', randNumber()],
-        ['5 к.', randNumber()],
-        ['6 к.', randNumber()],
-        ['8 к.', randNumber()],
-        ['9 к.', randNumber()],
-        ['10 к.', randNumber()],
-        ['11 к.', randNumber()],
-        ['15 к.', randNumber()],
-        ['16 к.', randNumber()],
-        ['ГК', randNumber()],
-        ['ГК-2', randNumber()],
-        ['ГЗ', randNumber()],
-        ['Мех. к.', randNumber()],
-        ['Не опр.', randNumber()],
-        ['НУК', randNumber()],
-        ['НОЦ', randNumber()],
-        ['СК', randNumber()]
+        ['1 к.', <?php echo $a[1]; ?>],
+        ['2 к.', <?php echo $a[2]; ?>],
+        ['3 к.', <?php echo $a[3]; ?>],
+        ['4 к.', <?php echo $a[4]; ?>],
+        ['5 к.', <?php echo $a[5]; ?>],
+        ['6 к.', <?php echo $a[6]; ?>],
+        ['8 к.', <?php echo $a[7]; ?>],
+        ['9 к.', <?php echo $a[8]; ?>],
+        ['10 к.', <?php echo $a[9]; ?>],
+        ['11 к.', <?php echo $a[10]; ?>],
+        ['15 к.', <?php echo $a[11]; ?>],
+        ['16 к.', <?php echo $a[12]; ?>],
+        ['ГК', <?php echo $a[13]; ?>],
+        ['ГК-2', <?php echo $a[14]; ?>],
+        ['ГЗ', <?php echo $a[15]; ?>],
+        ['Мех. к.', <?php echo $a[16]; ?>],
+        ['Не опр.', <?php echo $a[17]; ?>],
+        ['НУК', <?php echo $a[18]; ?>],
+        ['НОЦ', <?php echo $a[19]; ?>],
+        ['СК', <?php echo $a[20]; ?>]
       ]);
 
       var options = {

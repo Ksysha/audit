@@ -34,16 +34,26 @@ include_once("is_sign.php");
       <li class="active">Большие аудитории</li>
     </a>
   </ul>
+  
+<div id="checknum"> 
+	<form method="post" id="auditor_Form" action="big_auditor.php">
+      		<span><h3>Вместмость больше:</h3></span>
+		<input type="number" class="input" id="num"  name="num"/>
+        	<button type="submit" id="button">Показать</button>
+     	</form>
+</div>	
+  
 <div id="chart_div" style="margin-top: 0px; height: 600px;"></div>
 </div>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
 <!-- Для диаграмки данные -->
 <?php
+	$num = $_POST['num'];
   mysqli_select_db ($db , $dbname );
   $result = mysqli_query($db,"
   SELECT  count(id), Corps_id FROM Auditorium 
-  WHERE capacity > '25' GROUP BY Corps_id
+  WHERE capacity > '$num' GROUP BY Corps_id
   ");
   while($rows_res = mysqli_fetch_array($result)) {
     $count[] = $rows_res[0];
@@ -81,7 +91,8 @@ function randNumber() {
 function drawBasic() {
 
       var data = google.visualization.arrayToDataTable([
-        ['Здание', 'Большие аудитории',],
+        ['Здание', 'Аудитории, вместимость больше <?php if (isset($num)) {echo $num;}
+							else {echo 0;}?>',],
         ['1 к.', <?php echo $a[1]; ?>],
         ['2 к.', <?php echo $a[2]; ?>],
         ['3 к.', <?php echo $a[3]; ?>],

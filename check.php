@@ -197,31 +197,35 @@ include_once("is_sign.php");
   </script>
 
   <script>
-    document.getElementById('check2_').onkeypress = function (e) {
+    document.getElementById('Capacity').onkeypress = function (e) {
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
   <script>
-    document.getElementById('check2_1').onkeypress = function (e) {
+    document.getElementById('Number').onkeypress = function (e) {
+    return (/[0-9а-яa-zA-ZА-Я]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
+    }
+  </script>
+  <script>
+    document.getElementById('computerCount').onkeypress = function (e) {
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
   <script>
-    document.getElementById('check2_2').onkeypress = function (e) {
+    document.getElementById('socket').onkeypress = function (e) {
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
   <script>
-    document.getElementById('check2_3').onkeypress = function (e) {
+    document.getElementById('area').onkeypress = function (e) {
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
-  <script>
-    document.getElementById('check2_4').onkeypress = function (e) {
+   <script>
+    document.getElementById('CountSeats').onkeypress = function (e) {
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
-
 
 
 

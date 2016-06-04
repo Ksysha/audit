@@ -107,7 +107,7 @@ include_once("is_sign.php");
       <div class="check2">
         <label class="label"> Тип столов: </label>
         <div class="radio_col">
-         <div class="check"> <label><input <?php if(!empty($TableType) && $TableType == 'Амфитеатр') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Амфитеатр" >Амфитеатр</input></label><br></div>
+         <div class="check"> <label><input <?php if(!empty($TableType) && $TableType == 'Амфитеатр') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Амфитеатр" required>Амфитеатр</input></label><br></div>
           <div class="check"><label><input <?php if(!empty($TableType) && $TableType == 'Парты') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Парты">Парты</input></label><br></div>
           <div class="check"><label><input <?php if(!empty($TableType) && $TableType == 'Компьютерные столы') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Компьютерные столы">Компьютерные столы</input></label><br></div>
         </div>
@@ -197,31 +197,35 @@ include_once("is_sign.php");
   </script>
 
   <script>
-    document.getElementById('check2_').onkeypress = function (e) {
+    document.getElementById('Capacity').onkeypress = function (e) {
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
   <script>
-    document.getElementById('check2_1').onkeypress = function (e) {
+    document.getElementById('Number').onkeypress = function (e) {
+    return (/[0-9а-яa-zA-ZА-Я]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
+    }
+  </script>
+  <script>
+    document.getElementById('computerCount').onkeypress = function (e) {
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
   <script>
-    document.getElementById('check2_2').onkeypress = function (e) {
+    document.getElementById('socket').onkeypress = function (e) {
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
   <script>
-    document.getElementById('check2_3').onkeypress = function (e) {
+    document.getElementById('area').onkeypress = function (e) {
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
-  <script>
-    document.getElementById('check2_4').onkeypress = function (e) {
+   <script>
+    document.getElementById('CountSeats').onkeypress = function (e) {
     return (/[0-9]/.test(String.fromCharCode(e.charCode))); // разрешаем вводить только цифры
     }
   </script>
-
 
 
 

@@ -29,10 +29,10 @@
         <a href="index.php">
           <li class="active">Список Зданий</li>
         </a>
-        <a href="auditory_projector.html">
+        <a href="auditory_projector.php">
           <li>Аудитории с проектором</li>
         </a>
-        <a href="big_auditor.html">
+        <a href="big_auditor.php">
           <li>Большие аудитории</li>
         </a>
       </ul>

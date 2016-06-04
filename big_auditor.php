@@ -36,7 +36,7 @@ include_once("is_sign.php");
   </ul>
 
 <div id="checknum">
-	<form method="post" id="auditor_Form" action="big_auditor.php">
+	<form method="post" id="BigAuditorForm" action="big_auditor.php">
       		<span><h3>Вместмость больше:</h3></span>
 		<input type="number" class="input" id="num"  name="num"/>
         	<button type="submit" id="button">Показать</button>
@@ -49,7 +49,8 @@ include_once("is_sign.php");
 
 <!-- Для диаграмки данные -->
 <?php
-	$num = $_POST['num'];
+ if (isset($_POST['num']) && !empty($_POST['num'])) {$num = $_POST['num'];}
+							else {$num = 20;}
   mysqli_select_db ($db , $dbname );
   $result = mysqli_query($db,"
   SELECT  count(id), Corps_id FROM Auditorium
@@ -91,8 +92,7 @@ function randNumber() {
 function drawBasic() {
 
       var data = google.visualization.arrayToDataTable([
-        ['Здание', 'Аудитории, вместимость больше <?php if (isset($num)) {echo $num;}
-							else {echo 0;}?>',],
+        ['Здание', 'Аудитории, вместимость больше <?php echo $num;?>',],
         ['1 к.', <?php echo $a[1]; ?>],
         ['2 к.', <?php echo $a[2]; ?>],
         ['3 к.', <?php echo $a[3]; ?>],

@@ -37,9 +37,10 @@ include_once("is_sign.php");
 
 <div id="checknum">
 	<form method="post" id="BigAuditorForm" action="big_auditor.php">
-      		<span><h3>Вместмость больше:</h3></span>
-		<input type="number" class="input" id="num"  name="num"/>
-        	<button type="submit" id="button">Показать</button>
+      		<span style="text-align: center;"><h3>Вместимость больше:</h3></span>
+		<input type="number" class="input" id="num"  name="num" style="float: left;position: absolute;
+"/>
+        	<button type="submit" id="button" style="float: right;position: absolute;margin-left: 140px;">Показать</button>
      	</form>
 </div>
 

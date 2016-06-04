@@ -147,7 +147,7 @@ $(function() {
 $('#number').keyup(function() {
 var val = this.value;
 var re = new RegExp('^' + val,'i');
-$('#room-list a').each(function (){
+$('#room-list div').each(function (){
 $(this).toggle(re.test($(this).text()));
 });
 });

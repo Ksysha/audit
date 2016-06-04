@@ -1,4 +1,4 @@
-<?php include_once("config.php"); 
+<?php include_once("config.php");
 include_once("is_sign.php");
 ?>
 <!DOCTYPE html>
@@ -76,13 +76,29 @@ include_once("is_sign.php");
 
 </div>
 </div>
+<?php
+  if(isset($_GET["success"]) && $_GET["success"] == 'error') :
+    echo "<div id='error_box'>
+        <p id='error_message'></p>
+      </div>";
+?>
 
+<script type="text/javascript">
+  $('#error_message').html('Эта аудитория уже есть в базе');
+  $("#error_box").fadeIn(500).delay(1500).fadeOut(500);
+</script>
+
+<?php
+  else:
+    endif;
+?>
 <?php
   if(isset($_GET["success"]) && $_GET["success"] == 'true') :
     echo "<div id='error_box'>
         <p id='error_message'></p>
       </div>";
 ?>
+
 <script type="text/javascript">
   $('#error_message').html('Аудитория добавлена');
   $("#error_box").fadeIn(500).delay(1500).fadeOut(500);

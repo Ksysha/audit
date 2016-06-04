@@ -13,7 +13,7 @@ include_once("is_sign.php");
 <body>
 
 <div id="main">
-    <a href="index.html"><img src="polytech_logo.svg" id="logo"></a>
+    <a href="index.php"><img src="polytech_logo.svg" id="logo"></a>
     <div id="authorized">
     <img src="icon3.png" id="icon">
     <span id="username"></span>

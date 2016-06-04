@@ -155,53 +155,64 @@
     }
     else {
       $result = mysqli_query($db,"
-          INSERT INTO Auditorium (NumberAudit, Corps_id, Type, Capacity, CountSeats, TableType, Sockets, Conditioner, Area, Date) VALUES('$Number', '$corp', '$Type', '$Capacity', '$CountSeats', '$TableType', '$socket', '$conditioner', '$area', '$datePublic')
+          SELECT NumberAudit FROM Auditorium
           ");
-      if ($result) {
-          $Auditorium_id = mysqli_insert_id($db);
-      } else {
-          return rollback_db($db);
+      while ($rows_res = mysqli_fetch_array($result)) {
+          $NumberAudit[] = $rows_res[0];
       }
-
-      if (isset($_POST["computer"]) && isset($_POST["computerCount"])) {
-          $computer = $_POST["computer"];
-          $computerCount = $_POST["computerCount"];
-          $result = mysqli_query($db,"
-          INSERT INTO Auditorium_Equipment (Equipment_id, Auditorium_id,  Amount) VALUES('$computer', '$Auditorium_id', '$computerCount')
-          ");
-
-          if (!$result) {
+      if (in_array($Number, $NumberAudit)) {
+        header("Location: /audit/building.php?corp={$corp}&success=error");
+      }
+      else {
+        $result = mysqli_query($db,"
+            INSERT INTO Auditorium (NumberAudit, Corps_id, Type, Capacity, CountSeats, TableType, Sockets, Conditioner, Area, Date) VALUES('$Number', '$corp', '$Type', '$Capacity', '$CountSeats', '$TableType', '$socket', '$conditioner', '$area', '$datePublic')
+            ");
+        if ($result) {
+            $Auditorium_id = mysqli_insert_id($db);
+        } else {
             return rollback_db($db);
-          }
-      }
+        }
 
-      if (isset($_POST["projector"])) {
-          $projector = $_POST["projector"];
-          $projectorCount = 1;
-          $result = mysqli_query($db,"
-          INSERT INTO Auditorium_Equipment (Equipment_id, Auditorium_id,  Amount) VALUES('$projector', '$Auditorium_id', '$projectorCount')
-          ");
+        if (isset($_POST["computer"]) && isset($_POST["computerCount"])) {
+            $computer = $_POST["computer"];
+            $computerCount = $_POST["computerCount"];
+            $result = mysqli_query($db,"
+            INSERT INTO Auditorium_Equipment (Equipment_id, Auditorium_id,  Amount) VALUES('$computer', '$Auditorium_id', '$computerCount')
+            ");
 
-          if (!$result) {
-            return rollback_db($db);
-          }
-      }
+            if (!$result) {
+              return rollback_db($db);
+            }
+        }
 
-      if (isset($_POST["special"])) {
-          $special = $_POST["special"];
-          $specialCount = 1;
-          $result = mysqli_query($db,"
-          INSERT INTO Auditorium_Equipment (Equipment_id, Auditorium_id,  Amount) VALUES('$special', '$Auditorium_id', '$specialCount')
-          ");
+        if (isset($_POST["projector"])) {
+            $projector = $_POST["projector"];
+            $projectorCount = 1;
+            $result = mysqli_query($db,"
+            INSERT INTO Auditorium_Equipment (Equipment_id, Auditorium_id,  Amount) VALUES('$projector', '$Auditorium_id', '$projectorCount')
+            ");
 
-          if (!$result) {
-            return rollback_db($db);
-          }
-      }
+            if (!$result) {
+              return rollback_db($db);
+            }
+        }
 
-      mysqli_query($db, 'COMMIT');
-      mysqli_close($db);
-      header("Location: /audit/building.php?corp={$corp}&success=true");
+        if (isset($_POST["special"])) {
+            $special = $_POST["special"];
+            $specialCount = 1;
+            $result = mysqli_query($db,"
+            INSERT INTO Auditorium_Equipment (Equipment_id, Auditorium_id,  Amount) VALUES('$special', '$Auditorium_id', '$specialCount')
+            ");
+
+            if (!$result) {
+              return rollback_db($db);
+            }
+        }
+
+        mysqli_query($db, 'COMMIT');
+        mysqli_close($db);
+        header("Location: /audit/building.php?corp={$corp}&success=true");
+     }
     }
   }
 ?>

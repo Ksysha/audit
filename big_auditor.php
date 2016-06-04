@@ -62,12 +62,16 @@ include_once("is_sign.php");
   }
 
   for ($i=1;$i<21;$i++){
-	  if (!in_array($i, $corp_id)) {
-	  $a[$i]=0;
-	  }
-	  else {
-		  $a[$i]=$count[array_search($i, $corp_id)];
+	  if (isset($corp_id) && !empty($corp_id)) {
+	  	if (!in_array($i, $corp_id)) {
+	  		$a[$i]=0;
+	  	}
+	  	else {
+			$a[$i]=$count[array_search($i, $corp_id)];
 		}
+	else{
+		$a[$i]=0;
+	}
   }
   mysqli_close($db);
 ?>

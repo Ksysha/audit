@@ -610,16 +610,16 @@ div.delete {
   margin-right: 500px;
 }
 #checknum{
-	margin-left: 70%;
+	margin-left: 30%;
 	margin-top: 26px;
-	margin-bottom: -30px;
+	margin-bottom: -50px;
 	height:90px;
 	width:200px;
 }
 #checknum button{
 	height:28px;
 	width:120px;
-	 font: 20px/18px Arial, Tahoma, sans-serif;
+	font: 20px/18px Arial, Tahoma, sans-serif;
 	font-size:16px;
 }
 #num{

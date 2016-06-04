@@ -1,4 +1,4 @@
-<?php include_once("config.php"); 
+<?php include_once("config.php");
 include_once("is_sign.php");
 ?>
 <!DOCTYPE html>
@@ -34,16 +34,16 @@ include_once("is_sign.php");
       <li class="active">Большие аудитории</li>
     </a>
   </ul>
-  
-<div id="checknum"> 
+
+<div id="checknum">
 	<form method="post" id="auditor_Form" action="big_auditor.php">
       		<span><h3>Вместмость больше:</h3></span>
 		<input type="number" class="input" id="num"  name="num"/>
         	<button type="submit" id="button">Показать</button>
      	</form>
-</div>	
-  
-<div id="chart_div" style="margin-top: 0px; height: 600px;"></div>
+</div>
+
+<div id="chart_div" style="margin-top: -10px; height: 600px;"></div>
 </div>
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
@@ -52,14 +52,14 @@ include_once("is_sign.php");
 	$num = $_POST['num'];
   mysqli_select_db ($db , $dbname );
   $result = mysqli_query($db,"
-  SELECT  count(id), Corps_id FROM Auditorium 
+  SELECT  count(id), Corps_id FROM Auditorium
   WHERE capacity > '$num' GROUP BY Corps_id
   ");
   while($rows_res = mysqli_fetch_array($result)) {
     $count[] = $rows_res[0];
     $corp_id[] = $rows_res[1];
   }
-  
+
   for ($i=1;$i<21;$i++){
 	  if (!in_array($i, $corp_id)) {
 	  $a[$i]=0;

@@ -107,7 +107,7 @@ include_once("is_sign.php");
       <div class="check2">
         <label class="label"> Тип столов: </label>
         <div class="radio_col">
-         <div class="check"> <label><input <?php if(!empty($TableType) && $TableType == 'Амфитеатр') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Амфитеатр" >Амфитеатр</input></label><br></div>
+         <div class="check"> <label><input <?php if(!empty($TableType) && $TableType == 'Амфитеатр') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Амфитеатр" required>Амфитеатр</input></label><br></div>
           <div class="check"><label><input <?php if(!empty($TableType) && $TableType == 'Парты') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Парты">Парты</input></label><br></div>
           <div class="check"><label><input <?php if(!empty($TableType) && $TableType == 'Компьютерные столы') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Компьютерные столы">Компьютерные столы</input></label><br></div>
         </div>

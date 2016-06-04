@@ -69,6 +69,7 @@ include_once("is_sign.php");
 	  	else {
 			$a[$i]=$count[array_search($i, $corp_id)];
 		}
+	  }
 	else{
 		$a[$i]=0;
 	}

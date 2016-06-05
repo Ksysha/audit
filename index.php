@@ -1,6 +1,6 @@
 <?php
-	
-	if (isset($_COOKIE['log'])){	
+
+	if (isset($_COOKIE['log'])){
 	echo '
 <!DOCTYPE HTML>
 <html>
@@ -87,9 +87,9 @@
     </script>
   </body>
 </html>';
-	
+
 	}
 	else {
-		header("Location: /audit/sign_in.html");
+		header("Location: /sign_in.html");
 	}
 ?>

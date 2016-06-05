@@ -10,7 +10,7 @@
       ");
     if($result) {
       mysqli_close($db);
-      header("Location: /audit/building.php?corp={$corp}&destroy=true");
+      header("Location: /building.php?corp={$corp}&destroy=true");
     }
   }
 

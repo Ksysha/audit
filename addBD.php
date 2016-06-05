@@ -151,7 +151,7 @@
 
       mysqli_query($db, 'COMMIT');
       mysqli_close($db);
-      header("Location: /audit/building.php?corp={$corp}&update=true");
+      header("Location: /building.php?corp={$corp}&update=true");
     }
     else {
       $result = mysqli_query($db,"
@@ -161,7 +161,7 @@
           $NumberAudit[] = $rows_res[0];
       }
       if (in_array($Number, $NumberAudit)) {
-        header("Location: /audit/building.php?corp={$corp}&success=error");
+        header("Location: /building.php?corp={$corp}&success=error");
       }
       else {
         $result = mysqli_query($db,"
@@ -211,7 +211,7 @@
 
         mysqli_query($db, 'COMMIT');
         mysqli_close($db);
-        header("Location: /audit/building.php?corp={$corp}&success=true");
+        header("Location:/building.php?corp={$corp}&success=true");
      }
     }
   }

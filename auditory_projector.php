@@ -1,4 +1,4 @@
-<?php include_once("config.php"); 
+<?php include_once("config.php");
 include_once("is_sign.php");
 ?>
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ include_once("is_sign.php");
     <a href="auditory_projector.php">
       <li class="active">Аудитории с проектором</li>
     </a>
-    
+
     <a href="big_auditor.php">
       <li>Большие аудитории</li>
     </a>
@@ -50,15 +50,15 @@ username.textContent = localStorage.login;
 <?php
   mysqli_select_db ($db , $dbname );
   $result = mysqli_query($db,"
-  SELECT  count(Auditorium.id), Corps_id FROM Auditorium join auditorium_equipment 
-  on Auditorium.id = auditorium_equipment.auditorium_id  
-  WHERE equipment_id = '2' GROUP BY Corps_id
+  SELECT  count(Auditorium.id), Corps_id FROM Auditorium join Auditorium_Equipment
+  on Auditorium.id = Auditorium_Equipment.Auditorium_id
+  WHERE Equipment_id = '2' GROUP BY Corps_id
   ");
   while($rows_res = mysqli_fetch_array($result)) {
     $count[] = $rows_res[0];
     $corp_id[] = $rows_res[1];
   }
-  
+
   for ($i=1;$i<21;$i++){
 	  if (!in_array($i, $corp_id)) {
 	  $a[$i]=0;

@@ -164,7 +164,7 @@ include_once("is_sign.php");
 <!--onclick="but_saves()"onclick="deleteRoom()"-->
       <strong>
         <button  type="submit" name="check" id="but_save">Сохранить</button>
-        <button  type="button" id="but_remove" onclick="window.location = '/audit/building.php?corp=<?php echo$_GET["corp"]?>'">Отмена</button>
+        <button  type="button" id="but_remove" onclick="window.location = '/building.php?corp=<?php echo$_GET["corp"]?>'">Отмена</button>
       </strong>
 
     </form>

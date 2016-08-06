@@ -26,6 +26,7 @@ include_once("is_sign.php");
   <div class = "exit back">
     <a href="index.php">Назад</a>
   </div>
+  <a type="submit" id="button" class="download" href="download.php"><p>Выгрузить данные по корпусу</p></a>
   <div id="title">
     <span id="building">
     <?php

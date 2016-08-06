@@ -1,0 +1,839 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"N",
+				"NumberAudit"
+			],
+			[
+				"Nu",
+				"NumberAudit"
+			],
+			[
+				"count",
+				"countLecture"
+			],
+			[
+				"co",
+				"countComputerAuditor"
+			],
+			[
+				"A",
+				"Amount"
+			],
+			[
+				"com",
+				"computerChecked"
+			],
+			[
+				"Com",
+				"computerChecked"
+			],
+			[
+				"T",
+				"Type"
+			],
+			[
+				"NU",
+				"NumberAudit"
+			],
+			[
+				"Au",
+				"Auditorium"
+			],
+			[
+				"ro",
+				"rows_res1"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"room",
+				"room_id"
+			],
+			[
+				"roo",
+				"room_id"
+			],
+			[
+				"d",
+				"div	Tag"
+			],
+			[
+				"for",
+				"for	for …"
+			],
+			[
+				"Aud",
+				"Auditorium_id"
+			],
+			[
+				"re",
+				"required	Attr"
+			],
+			[
+				"new",
+				"news1"
+			],
+			[
+				"ID",
+				"IDinsert"
+			],
+			[
+				"add",
+				"addBD"
+			],
+			[
+				"_da",
+				"_dateRelevance"
+			],
+			[
+				"_",
+				"_dateRelevance"
+			],
+			[
+				"sou",
+				"source"
+			],
+			[
+				"pu",
+				"publications"
+			],
+			[
+				"hea",
+				"headline"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"h",
+				"headline"
+			],
+			[
+				"isr",
+				"isRhombus"
+			],
+			[
+				"isR",
+				"isRhombus"
+			],
+			[
+				"ar",
+				"arPoint"
+			],
+			[
+				"su",
+				"Sum_valid"
+			],
+			[
+				"cle",
+				"clean"
+			],
+			[
+				"filter",
+				"filter_var"
+			],
+			[
+				"IDCo",
+				"IDCompany"
+			],
+			[
+				"mysql_se",
+				"mysql_set_charset"
+			],
+			[
+				"ran",
+				"random_html_color"
+			],
+			[
+				"imagef",
+				"imagefilledpolygon"
+			],
+			[
+				"pars",
+				"parse_bb_code"
+			],
+			[
+				"rand",
+				"randStr"
+			],
+			[
+				"f",
+				"filelist"
+			],
+			[
+				"lo",
+				"logins"
+			],
+			[
+				"str",
+				"strcmp"
+			],
+			[
+				"log",
+				"logins"
+			],
+			[
+				"array",
+				"array_search"
+			],
+			[
+				"pa",
+				"passwords"
+			],
+			[
+				"pas",
+				"password1"
+			],
+			[
+				"in",
+				"in_array"
+			],
+			[
+				"preg_ma",
+				"preg_match_all"
+			],
+			[
+				"preg",
+				"preg_match"
+			],
+			[
+				"arr",
+				"arr2"
+			],
+			[
+				"array_u",
+				"array_unique"
+			],
+			[
+				"array_p",
+				"array_pop"
+			],
+			[
+				"end",
+				"endforeach"
+			],
+			[
+				"t",
+				"temp"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"s",
+				"size"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"array_s",
+				"array_slice"
+			],
+			[
+				"w",
+				"width"
+			],
+			[
+				"base",
+				"base_convert"
+			],
+			[
+				"e",
+				"elseif	elseif …"
+			],
+			[
+				"рав",
+				"равнобедренный"
+			],
+			[
+				"is_n",
+				"is_numeric"
+			],
+			[
+				"cu",
+				"currency1"
+			],
+			[
+				"ons",
+				"onsubmit	Attr"
+			],
+			[
+				"number",
+				"numberRoom"
+			],
+			[
+				"loca",
+				"localStorage"
+			],
+			[
+				"text",
+				"textContent"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"act",
+				"action	Attr"
+			],
+			[
+				"on",
+				"onclick	Attr"
+			],
+			[
+				"i",
+				"inline-block"
+			],
+			[
+				"ne",
+				"newStat"
+			],
+			[
+				"S",
+				"showList"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"al",
+				"text-align"
+			],
+			[
+				"a",
+				"assignCode"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 107.0,
+		"last_filter": "remove",
+		"selected_items":
+		[
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"eslint",
+				"SublimeLinter: Choose Lint Mode"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Don’t Show Errors on Save"
+			],
+			[
+				"lint",
+				"SublimeLinter: Toggle Linter"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"esli",
+				"Build With: ESLint"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"set jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"git ",
+				"Git: Status"
+			],
+			[
+				"log",
+				"Git: Log Current File"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"git blame",
+				"Github: Blame"
+			],
+			[
+				"syntax ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"syntax ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"coffee",
+				"CoffeeToJs: Convert selection"
+			],
+			[
+				"syntaxjs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/kseniacvirkun/projects/218984-kekstagram/build/js/resizer.js",
+		"/Users/kseniacvirkun/Library/Application Support/Sublime Text 3/Packages/ESLint/ESLint.sublime-settings",
+		"/Users/kseniacvirkun/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/kseniacvirkun/projects/218984-kekstagram/build/js/upload-stat.min.js",
+		"/Users/kseniacvirkun/projects/218984-kekstagram/Readme.md",
+		"/Users/kseniacvirkun/projects/.jshintrc",
+		"/Users/kseniacvirkun/projects/218984-kekstagram/.jshintrc",
+		"/Users/kseniacvirkun/projects/. jshintrc",
+		"/Users/kseniacvirkun/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/kseniacvirkun/Library/Application Support/Sublime Text 3/Packages/ESLint-Formatter/ESLint-Formatter.sublime-settings",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/opentip.js",
+		"/Users/kseniacvirkun/Library/Application Support/Sublime Text 3/Packages/User/ESLint.sublime-settings",
+		"/Users/kseniacvirkun/Downloads/toMP4.sh",
+		"/Users/kseniacvirkun/Downloads/volumedetect.sh",
+		"/Users/kseniacvirkun/Downloads/convert.sh",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/auditory_projector.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/instruction.html",
+		"/Users/kseniacvirkun/Downloads/Colonia.2015.1080p.WEB-DL.DD5.1.H264-FGT.srt",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/delete.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/users.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/main.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/check.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/big_auditor.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/addBD.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/building.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les10/exception.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les10/news.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les10/announcement.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les10/article.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les10/1.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/test.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les10/publications.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les10/menu.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les10/addBD.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/sign_in.html",
+		"/Applications/XAMPP/xamppfiles/var/mysql/MacBook-Pro-Ksenia.log",
+		"/Applications/XAMPP/xamppfiles/var/mysql/test.php",
+		"/Applications/XAMPP/xamppfiles/xampp",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/client.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/addBD.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/les2/2_5.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les2/2_7.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les2/lession2_2.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/les2/lesson2_6.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/les2/lesson2_4.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/les2/lession2_3.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/les2/2_4.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les2/2_6.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/company.php",
+		"/Users/kseniacvirkun/Downloads/ksu2/decompillation2.txt",
+		"/Users/kseniacvirkun/Downloads/special for ksuha.txt",
+		"/Users/kseniacvirkun/Downloads/special_for_ksuha2.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/check.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/audit/building.html",
+		"/Users/kseniacvirkun/projects/audit/main.css",
+		"/Users/kseniacvirkun/projects/audit/addBD.php",
+		"/Users/kseniacvirkun/projects/audit/check.html",
+		"/Users/kseniacvirkun/projects/audit/building.html",
+		"/Users/kseniacvirkun/projects/audit/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/les10/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5.3-login.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5_1.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5_3.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/menu.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/config.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les10/main.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/headder.php",
+		"/Users/kseniacvirkun/Downloads/MESSAGE.COM",
+		"/Users/kseniacvirkun/Downloads/BLOOP.COM",
+		"/Applications/XAMPP/xamppfiles/htdocs/les8/rhombus.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les8/square.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les8/rectangle.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les8/polygon.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/OP_Андрей/index.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/OP_Андрей/class_square.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/OP_Андрей/class_rhombus.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/OP_Андрей/class_rectangle.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/OP_Андрей/class_polygon.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/OP_Андрей/1.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les3/3_7.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les3/3_2.php",
+		"/Users/kseniacvirkun/Downloads/polygon.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les8/untitled",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/staff.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/1.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/agreement.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/validation.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/validation.php\\",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/footer.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/js/myscripts.js",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5.3-checkSignup.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5.3-checklogin.php",
+		"/Applications/XAMPP/xamppfiles/etc/php.ini",
+		"/Users/kseniacvirkun/projects/audit/sign_in.html",
+		"/Users/kseniacvirkun/projects/audit/audit.css",
+		"/Users/kseniacvirkun/projects/audit/big_auditor.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/БД-компания/1.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/les7/navigation.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/БД-компания/navigation.php",
+		"/Users/kseniacvirkun/Downloads/asembler (1).txt",
+		"/Users/kseniacvirkun/Downloads/info.txt",
+		"/Users/kseniacvirkun/Downloads/asembler.txt",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5.2.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/2.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/index1.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les6/6_2.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les6/6_3.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5_1.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les6/1/6_1.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5_2.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5.3-signup.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/1.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5_1-save.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les3/3_1.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les3/3_1.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5_1.html",
+		"/Users/kseniacvirkun/Downloads/20/1.php",
+		"/Users/kseniacvirkun/Downloads/ODU4ZDRmN/captcha.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/upload.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5_4.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5_4.css",
+		"/Applications/XAMPP/xamppfiles/htdocs/les5/5_4.сыы",
+		"/Applications/XAMPP/xamppfiles/htdocs/les3/3_4.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les3/3_8.php",
+		"/Applications/XAMPP/xamppfiles/htdocs/les3/3_5.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Applications/XAMPP/xamppfiles/htdocs/audit"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"document.write",
+			"getMessage",
+			"\"",
+			"strict",
+			"\"",
+			" {",
+			"\",\n",
+			"profile",
+			"learnenglish",
+			"index.html",
+			"/audit/",
+			"header",
+			"head",
+			"input",
+			"butt",
+			"char",
+			"№",
+			"$this",
+			"addBD",
+			"\"",
+			"left",
+			"id",
+			"room",
+			"block",
+			"butt",
+			".a",
+			"butt",
+			"exit",
+			"back",
+			"exi",
+			"div",
+			"body",
+			"num_rows",
+			"disp",
+			"NumberAudit",
+			"in_",
+			" && !",
+			"toggleDiagram",
+			"exit;",
+			"компьютерный",
+			"id",
+			"corp",
+			"comp",
+			"rollback_db",
+			"&& isset($TableType)",
+			"isset",
+			"toggleCat",
+			"showCat",
+			"room-list",
+			"else",
+			"building",
+			"corp",
+			"aud",
+			"bu",
+			"blocks",
+			"audit",
+			"auditor",
+			"auditorF",
+			"blocks",
+			"audito",
+			"form",
+			"success",
+			"room-list",
+			"\"",
+			"refer",
+			"class=\"auditorii\"",
+			"room-list",
+			"list",
+			"($db)",
+			"Auditorium_Equipment",
+			"or",
+			"search",
+			"[]",
+			"building",
+			"[]",
+			"\" ",
+			"a",
+			"A",
+			"coputer",
+			"checkbox",
+			"\"",
+			"arrRecords",
+			"source",
+			"News",
+			"agreementFrom",
+			"source",
+			"seeNews",
+			"source",
+			"NameCli",
+			"SurnameCli",
+			"\"",
+			"self::$tableName",
+			"self::",
+			"protected static $tableName;",
+			"self::TableName()",
+			"self::getD",
+			"self::$db",
+			"self::db",
+			"self::$db",
+			"$db",
+			"echo",
+			"\"",
+			"NameCli",
+			"SurnameCli",
+			"text",
+			"companyForm",
+			"seeNews",
+			"$this->TableName",
+			"TableName",
+			"clientForm",
+			"dblocation",
+			"\n$",
+			"return",
+			"getCenter",
+			"perimeter",
+			"Perimeter",
+			"setAngles",
+			"setPoints",
+			"set_points",
+			"set_sides",
+			"func_get_args",
+			"prevP",
+			"getPoints",
+			"\n",
+			"IdCompany",
+			"categories",
+			"res_car",
+			"staffSurname"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" {"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 195.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "opentip.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 196.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

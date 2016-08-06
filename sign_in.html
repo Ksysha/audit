@@ -13,12 +13,12 @@
     <form method="post" id="loginForm" action="users.php" onsubmit="doLogin(this); return false;">
       <div class="field">
         <label>Имя пользователя:</label>
-        <div class="input"><input type="text" id="login" name="login" /></div>
+        <div class="input"><input required type="text" id="login" name="login" /></div>
       </div>
 
       <div class="field">
         <label>Пароль:</label>
-        <div class="input"><input type="password" id="pass" name="pass" /></div>
+        <div class="input"><input required type="password" id="pass" name="pass" /></div>
       </div>
 
       <div class="submit">

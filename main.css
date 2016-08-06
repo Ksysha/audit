@@ -103,7 +103,6 @@ button {
   height: 34px;
   /* display: inline-block; */
   /* position: absolute; */
-  padding: 6px 20px;
   border: 1px solid #C9DDC9;
   border-radius: 15px;
   color: #004E63;
@@ -118,7 +117,27 @@ button {
   cursor: pointer;
   outline: none;
 }
-
+.download {
+  background: linear-gradient(#F3F8F3,#E0EEE0);
+  color: #004E63;
+  font-size: 14px;
+  width: 27%;
+  height: 25px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  text-align: center;
+  border-radius: 4px;
+  background: #66d077;
+  border: 1px solid #004E63;
+  line-height: normal;
+  cursor: pointer;
+  text-decoration: none;
+}
+.download p {
+  margin: 0;
+  margin-top: 3px;
+}
 .line_button {
  margin-top: 30px;
   margin-left: auto;
@@ -207,7 +226,7 @@ button {
   display: inline-block;
 }
 .delete {
-      width: 122px;
+    width: 122px;
     padding: 9px 13px;
     background: #FEFEFE;
     border: 1px solid #1F6A7F;

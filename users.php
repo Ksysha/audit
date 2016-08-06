@@ -36,7 +36,7 @@ if (isset($_POST['login']) && isset($_POST['pass'])) {
   {
 	$hash = md5(generateCode(10));
 	setcookie("log", $hash, time()+ 3600 ,"/");
-	header("Location: /index.php");
+	header("Location: index.php");
 
   }
   else

@@ -28,12 +28,12 @@ include_once("is_sign.php");
       </div>
     </form>
     <?php
-      if(isset($_GET["room_id"]) && !empty($_GET["room_id"])) {
-        $room_id = $_GET["room_id"];
+      if(isset($_GET["number"]) && !empty($_GET["number"])) {
+        $number = $_GET["number"];
         $corp = $_GET["corp"];
         mysqli_select_db ($db , $dbname );
         $result = mysqli_query($db,"
-          SELECT * FROM Auditorium WHERE Corps_id='$corp' AND NumberAudit='$room_id'
+          SELECT * FROM Auditorium WHERE Corps_id='$corp' AND NumberAudit='$number'
           ");
         $rows_res = mysqli_fetch_array($result);
         $id = $rows_res[0];
@@ -48,7 +48,7 @@ include_once("is_sign.php");
 
         mysqli_select_db ($db , $dbname );
         $result1 = mysqli_query($db,"
-          SELECT Equipment_id FROM Auditorium_Equipment WHERE Auditorium_id=(SELECT id FROM Auditorium WHERE NumberAudit='$room_id' AND Corps_id=$corp)
+          SELECT Equipment_id FROM Auditorium_Equipment WHERE Auditorium_id=(SELECT id FROM Auditorium WHERE NumberAudit='$number' AND Corps_id=$corp)
           ");
         while ($rows_res1 = mysqli_fetch_array($result1)) {
           $Equipment_id[] = $rows_res1[0];
@@ -75,7 +75,7 @@ include_once("is_sign.php");
     <?php else: endif; ?>
       <div class="check2">
         <label class="label"> Номер аудитории </label>
-        <input type="number" class="check2_num" id="Number" name="Number" required="" value='<?php echo $room_id;?>'/>
+        <input type="number" class="check2_num" id="Number" name="Number" required="" value='<?php echo $number;?>'/>
       </div>
       <input type="hidden" name="corp" value='<?php echo$_GET["corp"];?>'>
       <div class="check2">
@@ -83,10 +83,10 @@ include_once("is_sign.php");
         <label class="label">Тип аудитории:</label>
         <select class="check2_num" name="Type" id="Type" required>
           <option value=""></option>
-          <option <?php if(!empty($Type) && $Type == 'Лекционная') :?> selected <?php else: endif; ?> value="Лекционная">Лекционная</option>
-          <option <?php if(!empty($Type) && $Type == 'Практическая') :?> selected <?php else: endif; ?> value="Практическая">Практическая</option>
-          <option <?php if(!empty($Type) && $Type == 'Компьютерная') :?> selected <?php else: endif; ?> value="Компьютерная">Компьютерная</option>
-          <option <?php if(!empty($Type) && $Type == 'Лаборатория') :?> selected <?php else: endif; ?> value="Лаборатория">Лаборатория</option>
+          <option <?php if(!empty($Type) && $Type == 1) :?> selected <?php else: endif; ?> value="1">Лекционная</option>
+          <option <?php if(!empty($Type) && $Type == 3) :?> selected <?php else: endif; ?> value="3">Практическая</option>
+          <option <?php if(!empty($Type) && $Type == 2) :?> selected <?php else: endif; ?> value="2">Компьютерная</option>
+          <option <?php if(!empty($Type) && $Type == 5) :?> selected <?php else: endif; ?> value="5">Лаборатория</option>
           </select>
         </p>
       </div>
@@ -107,9 +107,9 @@ include_once("is_sign.php");
       <div class="check2">
         <label class="label"> Тип столов: </label>
         <div class="radio_col">
-         <div class="check"> <label><input <?php if(!empty($TableType) && $TableType == 'Амфитеатр') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Амфитеатр" required>Амфитеатр</input></label><br></div>
-          <div class="check"><label><input <?php if(!empty($TableType) && $TableType == 'Парты') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Парты">Парты</input></label><br></div>
-          <div class="check"><label><input <?php if(!empty($TableType) && $TableType == 'Компьютерные столы') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="Компьютерные столы">Компьютерные столы</input></label><br></div>
+         <div class="check"> <label><input <?php if(!empty($TableType) && $TableType == '1') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="1" required>Амфитеатр</input></label><br></div>
+          <div class="check"><label><input <?php if(!empty($TableType) && $TableType == '2') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="2">Парты</input></label><br></div>
+          <div class="check"><label><input <?php if(!empty($TableType) && $TableType == '3') :?> checked <?php else: endif; ?> type="radio" name="TableType" id="TableType" value="3">Компьютерные столы</input></label><br></div>
         </div>
       </div>
 
@@ -120,10 +120,10 @@ include_once("is_sign.php");
           <label><input type="checkbox" <?php if(!empty($computerChecked) && $computerChecked) :?> checked <?php else: endif; ?> name="computer" id="computer" onclick="toggleState(this)" value="1" />Компьютеры</label>
         </div>   <!-- компютеры -->
         <?php
-        if (!empty($room_id)) {
+        if (!empty($number)) {
           mysqli_select_db ($db , $dbname );
           $result2 = mysqli_query($db,"
-          SELECT  Amount FROM Auditorium_Equipment WHERE Equipment_id=1 AND Auditorium_id=(SELECT id FROM Auditorium WHERE NumberAudit='$room_id' AND Corps_id=$corp)
+          SELECT  Amount FROM Auditorium_Equipment WHERE Equipment_id=1 AND Auditorium_id=(SELECT id FROM Auditorium WHERE NumberAudit='$number' AND Corps_id=$corp)
           ");
           $rows_res2 = mysqli_fetch_array($result2);
           $Amount = $rows_res2[0];

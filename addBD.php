@@ -144,7 +144,7 @@
       else {
         if(in_array('3', $Eq_id)) {
           $result = mysqli_query($db,"
-          DELETE FROM Auditorium_EquipmentWHERE Auditorium_id='$Auditorium_id' AND Equipment_id=3
+          DELETE FROM Auditorium_Equipment WHERE Auditorium_id='$Auditorium_id' AND Equipment_id=3
           ");
         }
       }

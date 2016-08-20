@@ -62,7 +62,7 @@ include_once("is_sign.php");
     <?php
       if (!empty($NumberAudit)) {
         for ($i=0; $i < count($NumberAudit); $i++) {
-        echo "<div class='auditorii'><a class='refer' href='check.php?corp={$_GET["corp"]}&room_id={$NumberAudit[$i]}'  onclick='setRoom(this)'>$NumberAudit[$i]</a></div>";
+        echo "<div class='auditorii'><a class='refer' href='check.php?corp={$_GET["corp"]}&number={$NumberAudit[$i]}'  onclick='setRoom(this)'>$NumberAudit[$i]</a></div>";
         }
       }
       else {

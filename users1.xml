@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Data_Root>
+  <Descript ExpSet_Code="014" ExpSet_Name="Auditorium"><![CDATA[]]></Descript>
+  <Data>
+    <Collection caption="Аудитории" name="Data.Auditorium" child_tags="Object">
+      <Object name="ауд.143" class_id="Auditorium" id="15143">
+        <Collection caption="Свойства" name="Prop_Values" child_tags="prop_value">
+          <prop_value prop_name="Number" value="143"/>
+          <prop_value prop_name="Name" value="ауд.143"/>
+          <prop_value prop_name="Abbr" value="11 к., ауд.143"/>
+          <prop_value rlt_class="" prop_name="ID_Faculty" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Chair" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Building" value="15"/>
+          <prop_value prop_name="Amount" value="212"/>
+          <prop_value rlt_class="" prop_name="ID_TypeOfAuditorium" value="1"/>
+          <prop_value prop_name="Square" value="100"/>
+          <prop_value prop_name="Equipment" value="1"/>
+          <prop_value prop_name="TableType" value="1"/>
+          <prop_value prop_name="Darken" value="1"/>
+          <prop_value prop_name="Conditioner" value="1"/>
+          <prop_value prop_name="Height" value=""/>
+          <prop_value prop_name="Lenght" value=""/>
+          <prop_value prop_name="Width" value=""/>
+          <prop_value prop_name="ComputerEquipment" value=""/>
+          <prop_value prop_name="MediaFuture" value=""/>
+          <prop_value prop_name="ComputerAmount" value=""/>
+          <prop_value prop_name="MonitorDiagonal" value=""/>
+          <prop_value prop_name="Overlay" value=""/>
+          <prop_value prop_name="Note" value=""/>
+        </Collection>
+      </Object>
+    </Collection>
+  </Data>
+</Data_Root>

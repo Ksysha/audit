@@ -33,9 +33,10 @@ include_once("is_sign.php");
       $corp = $_GET["corp"];
       mysqli_select_db ( $db , $dbname );
       $result = mysqli_query($db,"
-        SELECT Name FROM Corps WHERE id='$corp'
+        SELECT Name, id FROM Corps WHERE id='$corp'
         ");
       $row = mysqli_fetch_row($result);
+      setcookie("corp", $row[1], time()+ 3600 ,"/");
       echo $row[0];
     ?>
     </span>

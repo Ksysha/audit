@@ -25,8 +25,8 @@ $Collection = $Data->appendChild($dom->createElement('Collection'));
 $Collection->setAttribute("caption", 'Аудитории');
 $Collection->setAttribute("name", 'Data.Auditorium');
 $Collection->setAttribute("child_tags", 'Object');
-	  
-while($res=mysqli_fetch_array($result)){ 
+
+while($res=mysqli_fetch_array($result)){
 	$result3 = mysqli_query($db,"
 		select Amount
 		from auditorium_equipment
@@ -51,7 +51,7 @@ while($res=mysqli_fetch_array($result)){
 		where auditorium_id=$res[0] and Equipment_id=1
 	");
 	$res6 = mysqli_fetch_array($result6, MYSQLI_NUM);
-	
+
 		$Object = $Collection->appendChild($dom->createElement('Object'));
         $Object->setAttribute("name", "ауд. $res[1]");
         $Object->setAttribute("class_id", 'Auditorium');
@@ -129,11 +129,11 @@ while($res=mysqli_fetch_array($result)){
               $prop_value->setAttribute("value", '');
             $prop_value = $Collection2->appendChild($dom->createElement('prop_value'));
               $prop_value->setAttribute("prop_name", 'Note');
-              $prop_value->setAttribute("value", '');	  
+              $prop_value->setAttribute("value", '');
 			  $dom->formatOutput = true;
 	}
 
-  
+
   // $logins = array("User1", "User2", "User3"); // Логины пользователей
   // $passwords = array("Pass1", "Pass2", "Pass3"); // Пароли пользователей
 
@@ -147,5 +147,21 @@ while($res=mysqli_fetch_array($result)){
   //   $user->appendChild($password);// Добавляем в узел "user" узел "password"
   //   $root->appendChild($user); // Добавляем в корневой узел "users" узел "user"
   // }
-   $dom->save("users1.xml"); // Сохраняем полученный XML-документ в файл
+
+  $dom->save("Auditorium.xml"); // Сохраняем полученный XML-документ в файл
+
+  $file = 'Auditorium.xml';
+
+  if (file_exists($file)) {
+    header('Content-Description: File Transfer');
+    header('Content-Type: application/octet-stream');
+    header('Content-Disposition: attachment; filename='.basename($file));
+    header('Expires: 0');
+    header('Cache-Control: must-revalidate');
+    header('Pragma: public');
+    header('Content-Length: ' . filesize($file));
+    readfile($file);
+    exit;
+  }
+
 ?>

@@ -2,14 +2,14 @@
 include_once("config.php");
 $corp= $_COOKIE['corp'];
 $result = mysqli_query($db,"
-	select id, NumberAudit, Corps_id, Type, TableType, Capacity, Area, Conditioner, CountSeats, sockets
-	from auditorium
-	where corps_id=$corp
+	SELECT id, NumberAudit, Corps_id, Type, TableType, Capacity, Area, Conditioner, CountSeats, Sockets
+	FROM Auditorium
+	WHERE Corps_id=$corp
 	");
 $result2 = mysqli_query($db,"
-	select abbr, ext_id
-	from corps
-	where id=$corp
+	SELECT Abbr, ext_id
+	FROM Corps
+	WHERE id=$corp
 	");
 $res2 = mysqli_fetch_array($result2, MYSQLI_NUM);
 $dom = new domDocument("1.0", "windows-1251"); // Создаём XML-документ версии 1.0 с кодировкой windows-1251
@@ -26,29 +26,29 @@ $Collection->setAttribute("caption", 'Аудитории');
 $Collection->setAttribute("name", 'Data.Auditorium');
 $Collection->setAttribute("child_tags", 'Object');
 
-while($res=mysqli_fetch_array($result)){
+while($res=mysqli_fetch_array($result)) {
 	$result3 = mysqli_query($db,"
-		select Amount
-		from auditorium_equipment
-		where auditorium_id=$res[0] and Equipment_id=1
+		SELECT Amount
+		from Auditorium_Equipment
+		where Auditorium_id=$res[0] and Equipment_id=1
 	");
 	$res3 = mysqli_fetch_array($result3, MYSQLI_NUM);
 	$result4 = mysqli_query($db,"
-		select Amount
-		from auditorium_equipment
-		where auditorium_id=$res[0] and Equipment_id=2
+		SELECT Amount
+		FROM Auditorium_Equipment
+		WHERE Auditorium_id=$res[0] and Equipment_id=2
 	");
 	$res4 = mysqli_fetch_array($result4, MYSQLI_NUM);
 	$result5= mysqli_query($db,"
-		select Amount
-		from auditorium_equipment
-		where auditorium_id=$res[0] and Equipment_id=3
+		SELECT Amount
+		FROM Auditorium_Equipment
+		WHERE Auditorium_id=$res[0] and Equipment_id=3
 	");
 	$res5 = mysqli_fetch_array($result5, MYSQLI_NUM);
 	$result6 = mysqli_query($db,"
-		select Equipment_id
-		from auditorium_equipment
-		where auditorium_id=$res[0] and Equipment_id=1
+		SELECT Equipment_id
+		FROM Auditorium_Equipment
+		WHERE Auditorium_id=$res[0] and Equipment_id=1
 	");
 	$res6 = mysqli_fetch_array($result6, MYSQLI_NUM);
 

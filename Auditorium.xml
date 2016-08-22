@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<Data_Root>
+  <Descript ExpSet_Code="014" ExpSet_Name="Auditorium"><![CDATA[]]></Descript>
+  <Data>
+    <Collection caption="Аудитории" name="Data.Auditorium" child_tags="Object">
+      <Object name="ауд. 324" class_id="Auditorium" id="89">
+        <Collection caption="Свойства" name="Prop_Values" child_tags="prop_value">
+          <prop_value prop_name="Number" value="324"/>
+          <prop_value prop_name="Name" value="ауд. 324"/>
+          <prop_value prop_name="Abbr" value="6 к., ауд. 324"/>
+          <prop_value rlt_class="" prop_name="ID_Faculty" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Chair" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Building" value="11"/>
+          <prop_value prop_name="Amount" value="10"/>
+          <prop_value rlt_class="" prop_name="ID_TypeOfAuditorium" value="2"/>
+          <prop_value prop_name="Square" value="1"/>
+          <prop_value prop_name="Equipment" value=""/>
+          <prop_value prop_name="TableType" value="3"/>
+          <prop_value prop_name="Darken" value="1"/>
+          <prop_value prop_name="Conditioner" value="1"/>
+          <prop_value prop_name="Height" value=""/>
+          <prop_value prop_name="Lenght" value=""/>
+          <prop_value prop_name="Width" value=""/>
+          <prop_value prop_name="ComputerEquipment" value=""/>
+          <prop_value prop_name="MediaFuture" value=""/>
+          <prop_value prop_name="ComputerAmount" value=""/>
+          <prop_value prop_name="MonitorDiagonal" value=""/>
+          <prop_value prop_name="Overlay" value=""/>
+          <prop_value prop_name="Note" value=""/>
+        </Collection>
+      </Object>
+      <Object name="ауд. 100" class_id="Auditorium" id="92">
+        <Collection caption="Свойства" name="Prop_Values" child_tags="prop_value">
+          <prop_value prop_name="Number" value="100"/>
+          <prop_value prop_name="Name" value="ауд. 100"/>
+          <prop_value prop_name="Abbr" value="6 к., ауд. 100"/>
+          <prop_value rlt_class="" prop_name="ID_Faculty" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Chair" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Building" value="11"/>
+          <prop_value prop_name="Amount" value="12"/>
+          <prop_value rlt_class="" prop_name="ID_TypeOfAuditorium" value="5"/>
+          <prop_value prop_name="Square" value="2"/>
+          <prop_value prop_name="Equipment" value=""/>
+          <prop_value prop_name="TableType" value="2"/>
+          <prop_value prop_name="Darken" value="1"/>
+          <prop_value prop_name="Conditioner" value="0"/>
+          <prop_value prop_name="Height" value=""/>
+          <prop_value prop_name="Lenght" value=""/>
+          <prop_value prop_name="Width" value=""/>
+          <prop_value prop_name="ComputerEquipment" value=""/>
+          <prop_value prop_name="MediaFuture" value="1"/>
+          <prop_value prop_name="ComputerAmount" value=""/>
+          <prop_value prop_name="MonitorDiagonal" value=""/>
+          <prop_value prop_name="Overlay" value=""/>
+          <prop_value prop_name="Note" value=""/>
+        </Collection>
+      </Object>
+      <Object name="ауд. 111" class_id="Auditorium" id="94">
+        <Collection caption="Свойства" name="Prop_Values" child_tags="prop_value">
+          <prop_value prop_name="Number" value="111"/>
+          <prop_value prop_name="Name" value="ауд. 111"/>
+          <prop_value prop_name="Abbr" value="6 к., ауд. 111"/>
+          <prop_value rlt_class="" prop_name="ID_Faculty" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Chair" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Building" value="11"/>
+          <prop_value prop_name="Amount" value="12"/>
+          <prop_value rlt_class="" prop_name="ID_TypeOfAuditorium" value="2"/>
+          <prop_value prop_name="Square" value="1"/>
+          <prop_value prop_name="Equipment" value=""/>
+          <prop_value prop_name="TableType" value="1"/>
+          <prop_value prop_name="Darken" value="1"/>
+          <prop_value prop_name="Conditioner" value="1"/>
+          <prop_value prop_name="Height" value=""/>
+          <prop_value prop_name="Lenght" value=""/>
+          <prop_value prop_name="Width" value=""/>
+          <prop_value prop_name="ComputerEquipment" value=""/>
+          <prop_value prop_name="MediaFuture" value="1"/>
+          <prop_value prop_name="ComputerAmount" value=""/>
+          <prop_value prop_name="MonitorDiagonal" value=""/>
+          <prop_value prop_name="Overlay" value=""/>
+          <prop_value prop_name="Note" value=""/>
+        </Collection>
+      </Object>
+      <Object name="ауд. 23" class_id="Auditorium" id="97">
+        <Collection caption="Свойства" name="Prop_Values" child_tags="prop_value">
+          <prop_value prop_name="Number" value="23"/>
+          <prop_value prop_name="Name" value="ауд. 23"/>
+          <prop_value prop_name="Abbr" value="6 к., ауд. 23"/>
+          <prop_value rlt_class="" prop_name="ID_Faculty" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Chair" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Building" value="11"/>
+          <prop_value prop_name="Amount" value="2"/>
+          <prop_value rlt_class="" prop_name="ID_TypeOfAuditorium" value="1"/>
+          <prop_value prop_name="Square" value="2"/>
+          <prop_value prop_name="Equipment" value=""/>
+          <prop_value prop_name="TableType" value="1"/>
+          <prop_value prop_name="Darken" value="1"/>
+          <prop_value prop_name="Conditioner" value="1"/>
+          <prop_value prop_name="Height" value=""/>
+          <prop_value prop_name="Lenght" value=""/>
+          <prop_value prop_name="Width" value=""/>
+          <prop_value prop_name="ComputerEquipment" value=""/>
+          <prop_value prop_name="MediaFuture" value=""/>
+          <prop_value prop_name="ComputerAmount" value="2"/>
+          <prop_value prop_name="MonitorDiagonal" value=""/>
+          <prop_value prop_name="Overlay" value=""/>
+          <prop_value prop_name="Note" value=""/>
+        </Collection>
+      </Object>
+      <Object name="ауд. 12" class_id="Auditorium" id="101">
+        <Collection caption="Свойства" name="Prop_Values" child_tags="prop_value">
+          <prop_value prop_name="Number" value="12"/>
+          <prop_value prop_name="Name" value="ауд. 12"/>
+          <prop_value prop_name="Abbr" value="6 к., ауд. 12"/>
+          <prop_value rlt_class="" prop_name="ID_Faculty" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Chair" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Building" value="11"/>
+          <prop_value prop_name="Amount" value="2"/>
+          <prop_value rlt_class="" prop_name="ID_TypeOfAuditorium" value="2"/>
+          <prop_value prop_name="Square" value="2"/>
+          <prop_value prop_name="Equipment" value=""/>
+          <prop_value prop_name="TableType" value="1"/>
+          <prop_value prop_name="Darken" value="1"/>
+          <prop_value prop_name="Conditioner" value="1"/>
+          <prop_value prop_name="Height" value=""/>
+          <prop_value prop_name="Lenght" value=""/>
+          <prop_value prop_name="Width" value=""/>
+          <prop_value prop_name="ComputerEquipment" value=""/>
+          <prop_value prop_name="MediaFuture" value=""/>
+          <prop_value prop_name="ComputerAmount" value="2"/>
+          <prop_value prop_name="MonitorDiagonal" value=""/>
+          <prop_value prop_name="Overlay" value=""/>
+          <prop_value prop_name="Note" value=""/>
+        </Collection>
+      </Object>
+      <Object name="ауд. 150" class_id="Auditorium" id="102">
+        <Collection caption="Свойства" name="Prop_Values" child_tags="prop_value">
+          <prop_value prop_name="Number" value="150"/>
+          <prop_value prop_name="Name" value="ауд. 150"/>
+          <prop_value prop_name="Abbr" value="6 к., ауд. 150"/>
+          <prop_value rlt_class="" prop_name="ID_Faculty" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Chair" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Building" value="11"/>
+          <prop_value prop_name="Amount" value="1"/>
+          <prop_value rlt_class="" prop_name="ID_TypeOfAuditorium" value="3"/>
+          <prop_value prop_name="Square" value="1"/>
+          <prop_value prop_name="Equipment" value=""/>
+          <prop_value prop_name="TableType" value="1"/>
+          <prop_value prop_name="Darken" value="1"/>
+          <prop_value prop_name="Conditioner" value="1"/>
+          <prop_value prop_name="Height" value=""/>
+          <prop_value prop_name="Lenght" value=""/>
+          <prop_value prop_name="Width" value=""/>
+          <prop_value prop_name="ComputerEquipment" value=""/>
+          <prop_value prop_name="MediaFuture" value="1"/>
+          <prop_value prop_name="ComputerAmount" value="1"/>
+          <prop_value prop_name="MonitorDiagonal" value=""/>
+          <prop_value prop_name="Overlay" value=""/>
+          <prop_value prop_name="Note" value=""/>
+        </Collection>
+      </Object>
+      <Object name="ауд. 160" class_id="Auditorium" id="103">
+        <Collection caption="Свойства" name="Prop_Values" child_tags="prop_value">
+          <prop_value prop_name="Number" value="160"/>
+          <prop_value prop_name="Name" value="ауд. 160"/>
+          <prop_value prop_name="Abbr" value="6 к., ауд. 160"/>
+          <prop_value rlt_class="" prop_name="ID_Faculty" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Chair" value=""/>
+          <prop_value rlt_class="" prop_name="ID_Building" value="11"/>
+          <prop_value prop_name="Amount" value="1"/>
+          <prop_value rlt_class="" prop_name="ID_TypeOfAuditorium" value="5"/>
+          <prop_value prop_name="Square" value="2"/>
+          <prop_value prop_name="Equipment" value=""/>
+          <prop_value prop_name="TableType" value="2"/>
+          <prop_value prop_name="Darken" value="1"/>
+          <prop_value prop_name="Conditioner" value="1"/>
+          <prop_value prop_name="Height" value=""/>
+          <prop_value prop_name="Lenght" value=""/>
+          <prop_value prop_name="Width" value=""/>
+          <prop_value prop_name="ComputerEquipment" value=""/>
+          <prop_value prop_name="MediaFuture" value=""/>
+          <prop_value prop_name="ComputerAmount" value="20"/>
+          <prop_value prop_name="MonitorDiagonal" value=""/>
+          <prop_value prop_name="Overlay" value=""/>
+          <prop_value prop_name="Note" value=""/>
+        </Collection>
+      </Object>
+    </Collection>
+  </Data>
+</Data_Root>
